@@ -1,13 +1,10 @@
-# Validação · Videira 3.0
+# Validação · Videira 4
 
-- 79 verificações de schemas, configurações, referências, assets, JSON e Instagram.
-- Sintaxe dos dois scripts de interface validada com `node --check`.
-- CSS analisado com CSS Tree: sintaxe e propriedades, desconsiderando variáveis customizadas.
-- Oito páginas renderizadas em quatro cenários, total de 32 renderizações: catálogo vazio; um produto sem metadados; seis produtos sem metadados; seis produtos com metadados.
-- Verificações adicionais: sete categorias mesmo sem tipos cadastrados; catálogo sem busca duplicada; catálogo sem filtros sem coluna vazia; campos de variante e formulário de compra; conta e faixa opcional.
-- Prévia adicional com 38 produtos públicos da Videira e fotos próprias do catálogo. É um retrato de referência, sem atualização ao vivo de preços ou disponibilidade.
-- ZIP de importação verificado e limitado às pastas reconhecidas do tema Shopify.
+- 84 verificações estruturais de schemas, referências, assets, JSON e Instagram.
+- 32 renderizações LiquidJS: oito páginas em quatro cenários de catálogo e metadados.
+- Teste real no Chromium em 1440 e 390 px: imagens completas, ausência de rolagem horizontal da página e de erros JavaScript.
+- Interações verificadas: favoritos e persistência após recarregar, carrossel, menu móvel, rodapé móvel, filtros, seleção de variante e carrinho.
+- Compra de seis garrafas a R$ 49 validada com total de R$ 294; variante indisponível desabilita compra; duas unidades de variante a R$ 120 totalizam R$ 240.
+- Capturas reais em preview-desktop.png e preview-mobile.png. Dados e fotos da prévia são um retrato público do catálogo Videira.
 
-O renderizador LiquidJS adapta tags específicas da Shopify. Não substitui Theme Check oficial, prévia hospedada e pedido de teste. O navegador integrado de QA não estava disponível; a suíte de navegador herdada não foi executada. Carrossel, menus, filtros, formulário de newsletter e checkout devem ser conferidos na prévia real antes de publicar.
-
-Nesta revisão houve acesso ao HTML, estilos, navegação e imagens públicos da Cia do Vinho, além de páginas internas. Não houve comparação de capturas do site completo em navegador nem validação visual pixel a pixel.
+Os testes locais usam LiquidJS e um servidor que simula endpoints Shopify. Não validam pagamento, frete, inscrição real na newsletter ou configurações da loja. Esses fluxos exigem a prévia Shopify e pedido de teste. Não houve publicação direta na loja.

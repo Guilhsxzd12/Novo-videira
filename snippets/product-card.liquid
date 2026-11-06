@@ -1,7 +1,7 @@
 {% doc %}
 @param {product} product - Shopify product
 {% enddoc %}
-<article class="sf-wine-card"><a class="sf-wine-visual" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+<article class="sf-wine-card"><button class="zip-favorite" type="button" data-favorite data-product-key="{{ product.id }}" data-favorite-title="{{ product.title | escape }}" data-favorite-url="{{ product.url }}" aria-label="Favoritar {{ product.title | escape }}" aria-pressed="false">{% render 'icon', name: 'heart' %}</button><a class="sf-wine-visual" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
 {% unless product.available %}<div class="sf-product-badges"><span>{{ 'product.sold_out' | t }}</span></div>{% endunless %}
 {% if product.featured_image %}{{ product.featured_image | image_url: width: 720 | image_tag: class: 'wine-photo', loading: 'lazy', widths: '180,360,540,720', sizes: '(max-width: 760px) 45vw, 245px', alt: product.title }}{% else %}<span class="wine-photo-placeholder">{% render 'icon', name: 'glass' %}<small>{{ 'product.no_image' | t }}</small></span>{% endif %}</a>
 <div class="sf-wine-info"><div class="sf-wine-origin">{{ product.metafields.custom.region.value | escape }}{% if product.metafields.custom.country.value != blank %} · {{ product.metafields.custom.country.value | escape }}{% endif %}</div>

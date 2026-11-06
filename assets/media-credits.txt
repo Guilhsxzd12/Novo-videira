@@ -1,3 +1,6 @@
+Reference category, food, country and brand graphics: user-provided Cia do Vinho ZIP. Converted to WebP for the requested reconstruction.
+Black Videira banner: edited from the user-provided reference banner.
+The prior Unsplash assets below are retained as unused legacy assets.
 Montserrat: Google Fonts / The Montserrat Project, SIL Open Font License.
 License: assets/montserrat-license.txt
 Product photos, logo and wine-table photo: Videira Vinhoteca.

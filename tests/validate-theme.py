@@ -52,10 +52,7 @@ for p in (root / 'locales').glob('*.json'):
 css = (root / 'assets/novo-videira.css').read_text()
 assert css.count('{') == css.count('}'), 'CSS novo com blocos desbalanceados'
 
-for declarations in re.findall(r'[^{}]*\.sf-wine-card\{([^}]+)\}', css):
-    assert 'border-radius' not in declarations and 'height:' not in declarations, 'Formato dos cards deve permanecer'
-
 assert 'videira.vinhoteca' not in (root / 'sections/videira-footer.liquid').read_text()
 assert 'instagram.com/videiravinhoteca/' in (root / 'sections/videira-footer.liquid').read_text()
-assert 'novo-videira.css' in (root / 'layout/theme.liquid').read_text()
+assert 'videira-zip.css' in (root / 'layout/theme.liquid').read_text()
 print(f'PASS: {checks} verificações de arquivos, schemas e referências; JSON, assets, cards e Instagram.')

@@ -1,0 +1,944 @@
+/* === BLOG POST PAGE (individual post) === */
+
+/* --- Post layout: readable width + refined typography --- */
+html body .conteudo-pagina-postagem {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+html body .conteudo-pagina-postagem .titulo-info-postagem {
+  text-align: center !important;
+  margin-bottom: 32px !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+html body .conteudo-pagina-postagem .titulo-info-postagem h1 {
+  font-size: 2.2rem !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 12px 0 16px !important;
+  letter-spacing: -0.02em !important;
+}
+
+html body .conteudo-pagina-postagem .categoria-postagem {
+  display: inline-block !important;
+  background: #8B1A4A !important;
+  color: #fff !important;
+  padding: 4px 14px !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+html body .conteudo-pagina-postagem .info-postagem {
+  font-size: 0.875rem !important;
+  color: #888 !important;
+  margin-top: 8px !important;
+}
+
+/* --- Article body typography --- */
+html body .conteudo-postagem {
+  font-size: 1.125rem !important;
+  line-height: 1.8 !important;
+  color: #333 !important;
+  margin: 0 auto !important;
+}
+
+html body .conteudo-postagem p {
+  margin-bottom: 1.5em !important;
+}
+
+html body .conteudo-postagem h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 2em 0 0.8em !important;
+  line-height: 1.3 !important;
+}
+
+html body .conteudo-postagem h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin: 1.5em 0 0.6em !important;
+}
+
+html body .conteudo-postagem img {
+  border-radius: 10px !important;
+  margin: 1.5em 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+html body .conteudo-postagem blockquote {
+  border-left: 4px solid #8B1A4A !important;
+  padding: 12px 20px !important;
+  margin: 1.5em 0 !important;
+  background: #f9f5f7 !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-style: italic !important;
+  color: #555 !important;
+}
+
+html body .conteudo-postagem a {
+  color: #8B1A4A !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+html body .conteudo-postagem ul, html body .conteudo-postagem ol {
+  padding-left: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+html body .conteudo-postagem li {
+  margin-bottom: 0.5em !important;
+}
+
+/* --- Share buttons: hide Facebook, modern style --- */
+html body .rrssb-facebook {
+  display: none !important;
+}
+
+html body .rrssb-buttons {
+  display: flex !important;
+  gap: 10px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  justify-content: center !important;
+}
+
+html body .rrssb-buttons li {
+  margin: 0 !important;
+}
+
+html body .rrssb-buttons li a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 20px !important;
+  border-radius: 50px !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+html body .rrssb-whatsapp a {
+  background: #25D366 !important;
+  color: #fff !important;
+}
+
+html body .rrssb-whatsapp a:hover {
+  background: #1da851 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.3) !important;
+}
+
+html body .rrssb-outros a {
+  background: #8B1A4A !important;
+  color: #fff !important;
+}
+
+html body .rrssb-outros a:hover {
+  background: #6d1439 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(139,26,74,0.3) !important;
+}
+
+html body .rrssb-buttons .rrssb-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #fff !important;
+}
+
+html body .rrssb-buttons .rrssb-text {
+  font-size: 0.875rem !important;
+}
+
+
+
+
+
+/* Share text color fix - high specificity */
+html body .product-social .rrssb-buttons li.rrssb-whatsapp a span.rrssb-text,
+html body .social-area-bottom .rrssb-buttons li.rrssb-whatsapp a span.rrssb-text,
+html body .social-area .rrssb-buttons li.rrssb-whatsapp a span.rrssb-text {
+  color: #fff !important;
+}
+html body .product-social .rrssb-buttons li.rrssb-outros a span.rrssb-text,
+html body .social-area-bottom .rrssb-buttons li.rrssb-outros a span.rrssb-text,
+html body .social-area .rrssb-buttons li.rrssb-outros a span.rrssb-text {
+  color: #fff !important;
+}
+/* Share bottom area */
+html body .social-area-bottom {
+  margin-top: 40px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid #eee !important;
+}
+
+/* Top share area in titulo-info */
+html body .titulo-info-postagem .social-area {
+  margin-top: 20px !important;
+}
+
+/* --- Responsive post --- */
+@media (max-width: 768px) {
+  html body .conteudo-pagina-postagem {
+    padding: 0 16px !important;
+  }
+  html body .conteudo-pagina-postagem .titulo-info-postagem h1 {
+    font-size: 1.6rem !important;
+  }
+  html body .conteudo-postagem {
+    font-size: 1rem !important;
+  }
+}
+
+div#main-area div.produto div.main-produto .area-buy-product button.button {
+    background: #00a441;
+    border-color: #00a441;
+}
+
+div#main-area div.produto div.main-produto .area-buy-product button.button:hover {
+    background: #008b37;
+    border-color: #008b37;
+}
+
+/* Front */
+
+/* .header-middle {
+    padding: 20px 0 !important;
+}  */
+
+@media (min-width: 1024px) {
+	.title-ctn h2.bg-title {
+	  font-size: 26px !important;
+	}
+ul.menu-child-32.menu-level-2 {
+    display: flex;
+    width: 80%;
+}
+}
+
+/* Ocultar Botao de volta ao topo */
+.back-to-top.opened {
+    display: none !important;
+}
+
+
+/* Pop-up Whats */
+#popup-msg-whats {
+    background: #1bd741 !important;
+}
+
+
+/* Cor Botão de Compra */
+
+ul.product-list li .btn-comprar-vitrine {
+    background: #83298f;
+}
+
+ul.product-list li .btn-comprar-vitrine:hover {
+    background: #a042ad;
+}
+
+/* HEADER */
+
+.header-top {
+    font-weight: bold !important;
+}
+
+ul#nav-root>li>a::after {
+    border-right: 0.6px solid #eaeaea !important;
+    border-bottom: 1.6px solid #eaeaea !important;
+}
+
+ul#nav-root>li>.container-menu .menu-level-2>li>a {
+    text-transform: capitalize !important;
+}
+
+ul#nav-root>li>.container-menu {
+    width: 680px !important;
+}
+
+#nav-root > li.menu-list-57.has-childs.harmonizacoes.item-menu-harmonizacoes > div, #nav-root > li.menu-list-81.has-childs.kits.item-menu-kits > div, #nav-root > li.menu-list-77.has-childs.precos.item-menu-precos > div {
+    width: 300px !important;
+}
+
+li.menu-list-77.has-childs.precos.item-menu-precos ul li:nth-child(even), li.menu-list-81.has-childs.kits.item-menu-kits ul li:nth-child(even), li.menu-list-57.has-childs.harmonizacoes.item-menu-harmonizacoes ul li:nth-child(even) {
+    float: none !important;
+}
+
+/* Título dentro da página de pesquisa */
+.descricao-pesquisa h1 {
+    display: flex;
+    font-size: 1.7em;
+    justify-content: center;
+}
+
+ul#nav-root>li>.container-menu .menu-child-36.menu-level-2>li, ul#nav-root>li>.container-menu .menu-child-32.menu-level-2>li {
+    width: 33.33%;
+}
+
+#nav-root > li.menu-list-36.has-childs.pais.item-menu-pais ul li a span.menu-icon img {
+    margin-right: 10px;
+}
+
+#nav-root > li.menu-list-36.has-childs.pais.item-menu-pais > div > ul > li.menu-list-42.has-childs.novo-mundo.item-menu-novo-mundo > div {
+    width: 180px !important;
+}
+
+header.is-tablet-mobile .header-search-full {
+    background: #eaeaea;
+}
+
+.footer-middle h3.section-title.accordion {
+    background: #eaeaea;
+    border: 1px solid #eaeaea;
+    color: #000;
+}
+
+/* Ajustes do Header */
+
+.header-top {
+    background: #000000;
+    font-weight: bold;
+}
+
+.header-bottom {
+    background: #eaeaea;
+}
+
+ul#nav-root > li > a {
+    color: #000000;
+    font-weight: bold;
+}
+
+ul#nav-root > li:hover > a {
+    background: #eaeaea;
+}
+
+/* Css Checkout */
+
+.column-cart.column-valor-produto.column-valor-cartao:after {
+    content: "3% off no PIX";
+    font-size: 0.850em;
+    color: #00ac77;
+    font-weight: bold;
+}
+
+.item-resumo.valor-total-pagar:before {
+    content: "3% off no PIX";
+    font-size: 0.850em;
+    color: #00ac73;
+    font-weight: bold;
+    text-align: end;
+}
+
+.button-buy, .mensagem-pop-up.popup-forma-pagto-multiplos .footer .button:nth-child(1), .mensagem-pop-up.popup-forma-pagto-multiplos .footer .button:nth-child(2) {
+    border-color: #3F1B48;
+    background: #3F1B48;
+}
+
+
+@media (min-width: 1024px) {
+	ul.menu-child-36.menu-level-2 {
+	    display: flex;
+	    flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.menu-child-36.menu-level-2>li {
+	    width: 18% !important;
+	}
+}
+
+li.menu-list-238.has-childs.velho-mundo.item-menu-velho-mundo {
+    padding-top: 5px;
+}
+
+/* menu pais */
+
+li.menu-list-238.has-childs.velho-mundo.item-menu-velho-mundo {
+    margin-right: 24px;
+}
+
+/* titulos footer midle */
+.footer-middle h3 {
+    font-weight: bold!important;
+}
+
+/* === BLOG - Grid elegante (v2) === */
+html body .destaque-topo, html body .tarja-superior-desktop { display: none !important; }
+html body .postagens-inferior .conteudo-menor { display: none !important; }
+html body .title-ctn-blog { margin: 0 0 40px !important; }
+html body .title-ctn-blog span { font-size: 11px !important; letter-spacing: 3px !important; text-transform: uppercase !important; color: #aaa !important; font-weight: 600 !important; }
+html body .postagens-inferior .post-ctn a { display: flex !important; flex-direction: column !important; text-decoration: none !important; color: inherit !important; }
+html body .postagens-inferior .content-post-blog { padding: 20px 0 0 !important; }
+html body .postagens-inferior .categoria-postagem .text.categoria { color: #bb4a96 !important; font-size: 10px !important; letter-spacing: 2px !important; text-transform: uppercase !important; font-weight: 700 !important; background: none !important; border: none !important; padding: 0 !important; }
+html body .postagens-inferior .post-ctn h2, html body .postagens-inferior .titulo-postagem { text-align: center !important; text-transform: uppercase !important; font-size: 13px !important; font-weight: 700 !important; line-height: 1.6 !important; letter-spacing: 0.5px !important; color: #1a1a1a !important; margin: 0 !important; }
+html body .postagens-inferior .resumo-postagem, html body .postagens-inferior .texto-postagem, html body .postagens-inferior .ver-post, html body .postagens-inferior .data-comments-categoria-post, html body .postagens-inferior .leia-mais-ctn { display: none !important; }
+html body .pesquisa-paginacao { margin-top: 64px !important; }
+@media (max-width: 768px) { html body .postagens-inferior .content-postagem { grid-template-columns: 1fr !important; gap: 32px !important; } html body .postagens-inferior .post-ctn .image-wrapper { height: 240px !important; } }
+@media (min-width: 769px) and (max-width: 1024px) { html body .postagens-inferior .content-postagem { grid-template-columns: repeat(2, 1fr) !important; } }
+
+/* Mobile - Fix paginas institucionais com largura fixa */
+@media (max-width: 768px) {
+    /* Paragrafos e divs com width inline (560px, 720px etc) */
+    .content-page p[style*="width"],
+    .content-page div[style*="width"] {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    /* Tabelas que podem estourar */
+    .content-page table {
+        max-width: 100% !important;
+        overflow-x: auto;
+        display: block;
+    }
+    /* Imagens dentro das paginas institucionais */
+    .content-page img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+
+/* ========== BLOG V2 - Layout Clean (html body specificity) ========== */
+
+/* Imagens quadradas com zoom */
+html body .post-ctn .image-wrapper {
+    height: 0 !important;
+    padding-bottom: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+html body .post-ctn .image-wrapper figure {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+html body .post-ctn .image-wrapper figure img,
+html body .post-ctn .image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s ease !important;
+}
+html body .post-ctn:hover .image-wrapper figure img,
+html body .post-ctn:hover .image-wrapper img {
+    transform: scale(1.05) !important;
+}
+
+/* Titulo - sem uppercase */
+html body .post-ctn h2,
+html body .titulo-postagem {
+    text-transform: none !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    color: #333 !important;
+    text-align: center !important;
+}
+
+/* Categoria roxo */
+html body .categoria-postagem .text.categoria {
+    color: #83298f !important;
+    font-size: 11px !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 600 !important;
+}
+html body .categoria-postagem h3 {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #83298f !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+}
+
+/* Esconder resumo e leia mais */
+html body .resumo-postagem,
+html body .texto-postagem { display: none !important; }
+html body .link-leia-mais { display: none !important; }
+
+/* Titulo secao */
+html body h2.bg-title {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    color: #333 !important;
+    margin: 30px 0 20px !important;
+}
+
+/* Sidebar */
+html body .postagens-mais-acessadas .postagem {
+    border-radius: 8px !important;
+    transition: background 0.2s !important;
+    padding: 8px !important;
+}
+html body .postagens-mais-acessadas .postagem:hover { background: #f5f0f7 !important; }
+html body .postagens-mais-acessadas .postagem .image-wrapper figure img { border-radius: 8px !important; }
+
+/* Carousel e banner */
+html body .destaque-topo .post-topo { border-radius: 12px !important; overflow: hidden !important; }
+html body #cia-banner-header { border-radius: 12px !important; overflow: hidden !important; margin-bottom: 30px !important; }
+
+/* ============================================
+   BLOG V2 - Layout & Typography Improvements
+   ============================================ */
+
+/* --- Hide sidebar on blog post pages --- */
+body[class*="pagina-blog"] .pagina-lateral,
+.conteudo-pagina-postagem ~ .pagina-lateral,
+.pagina-tipo-blog .pagina-lateral {
+  display: none !important;
+}
+
+/* Make blog content full width when sidebar is hidden */
+body[class*="pagina-blog"] .pagina-conteudo,
+.conteudo-pagina-postagem .pagina-conteudo {
+  width: 100% !important;
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+/* --- Blog Post Hero Image --- */
+.conteudo-pagina-postagem .pagina-imagem img,
+.conteudo-pagina-postagem .post-imagem img {
+  width: 100% !important;
+  max-height: 480px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+}
+
+/* --- Blog Post Title --- */
+.conteudo-pagina-postagem h1 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: #1a1a1a !important;
+  margin-bottom: 8px !important;
+}
+
+/* --- Blog Post Meta (date, views) --- */
+.titulo-info-postagem .info-postagem,
+.titulo-info-postagem .data-postagem {
+  font-size: 0.85rem !important;
+  color: #888 !important;
+}
+
+/* --- Blog Post Body Typography --- */
+.pagina-conteudo p {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  color: #333 !important;
+  margin-bottom: 1.2em !important;
+}
+
+.pagina-conteudo h2,
+.pagina-conteudo h3 {
+  color: #1a1a1a !important;
+  margin-top: 2em !important;
+  margin-bottom: 0.6em !important;
+  line-height: 1.3 !important;
+}
+
+.pagina-conteudo h2 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #8B1A4A !important;
+  padding-bottom: 8px !important;
+}
+
+.pagina-conteudo h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+/* --- Blog Post Images inside content --- */
+.pagina-conteudo img {
+  border-radius: 10px !important;
+  margin: 1.5em 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* --- Blog Post Links --- */
+.pagina-conteudo a {
+  color: #8B1A4A !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+.pagina-conteudo a:hover {
+  color: #6d1039 !important;
+}
+
+/* --- Share Buttons Styling --- */
+.social-area-bottom,
+.conteudo-pagina-postagem .compartilhar-pagina {
+  margin-top: 2em !important;
+  padding-top: 1.5em !important;
+  border-top: 1px solid #eee !important;
+}
+
+/* --- Blog Listing Page (grid improvements) --- */
+.listagem-blog .item-postagem,
+.blog-lista .item-postagem {
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.listagem-blog .item-postagem:hover,
+.blog-lista .item-postagem:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
+}
+
+/* Blog listing images square */
+.listagem-blog .item-postagem .imagem-postagem,
+.blog-lista .item-postagem .imagem-postagem {
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+}
+
+.listagem-blog .item-postagem .imagem-postagem img,
+.blog-lista .item-postagem .imagem-postagem img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.listagem-blog .item-postagem:hover .imagem-postagem img,
+.blog-lista .item-postagem:hover .imagem-postagem img {
+  transform: scale(1.05) !important;
+}
+
+/* --- Hide sidebar on blog listing too --- */
+.listagem-blog .pagina-lateral,
+.blog-lista .pagina-lateral {
+  display: none !important;
+}
+
+/* --- Blockquote styling --- */
+.pagina-conteudo blockquote {
+  border-left: 4px solid #8B1A4A !important;
+  padding: 12px 20px !important;
+  margin: 1.5em 0 !important;
+  background: #faf5f7 !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-style: italic !important;
+  color: #555 !important;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+  .conteudo-pagina-postagem h1 {
+    font-size: 1.5rem !important;
+  }
+  .pagina-conteudo p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+  .pagina-conteudo h2 {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* =============================================
+   BLOG LISTING PAGE (/blog)
+   ============================================= */
+
+/* Hide sidebar on blog listing */
+html body .postagens-inferior .lateral-info-posts {
+  display: none !important;
+}
+
+/* Main content full width */
+.postagens-inferior .conteudo-maior {
+  width: 100% !important;
+  float: none !important;
+}
+
+/* Blog listing grid - 3 columns, tighter spacing */
+.postagens-inferior .content-postagem {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px 20px !important;
+  row-gap: 28px !important;
+  column-gap: 20px !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* Blog card styling */
+.postagens-inferior .post-ctn {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  background: #fff !important;
+}
+
+html body .postagens-inferior .post-ctn:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(139,26,74,0.15) !important;
+}
+
+/* Blog card images - 16:10 ratio via padding-bottom (overrides platform 1:1) */
+.postagens-inferior .post-ctn .image-wrapper {
+  padding-bottom: 62.5% !important;
+  height: 0 !important;
+  box-sizing: content-box !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+html body .postagens-inferior .post-ctn .image-wrapper figure {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.postagens-inferior .post-ctn .image-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s ease !important;
+}
+
+.postagens-inferior .post-ctn:hover .image-wrapper img {
+  transform: scale(1.06) !important;
+}
+
+/* Gradient overlay on card images */
+html body .postagens-inferior .post-ctn .image-wrapper::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 40% !important;
+  background: linear-gradient(transparent, rgba(0,0,0,0.15)) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* Blog card content area */
+html body .postagens-inferior .post-ctn .content-post-blog {
+  padding: 16px 18px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.postagens-inferior .post-ctn .content-post-blog h2,
+.postagens-inferior .post-ctn .content-post-blog .titulo-postagem {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: #222 !important;
+  margin-bottom: 8px !important;
+}
+
+.postagens-inferior .post-ctn .content-post-blog .categoria-postagem,
+.postagens-inferior .post-ctn .content-post-blog .info-postagem {
+  font-size: 0.78rem !important;
+  color: #8B1A4A !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+}
+
+/* Blog listing title section */
+.postagens-inferior .title-ctn-blog {
+  text-align: center !important;
+  margin-bottom: 32px !important;
+}
+
+.postagens-inferior .title-ctn-blog h2 {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+}
+
+/* Pagination styling */
+.postagens-inferior .pesquisa-paginacao {
+  text-align: center !important;
+  margin-top: 40px !important;
+  padding: 20px 0 !important;
+}
+
+.postagens-inferior .pesquisa-paginacao a {
+  display: inline-block !important;
+  padding: 8px 16px !important;
+  margin: 0 4px !important;
+  border-radius: 8px !important;
+  color: #8B1A4A !important;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+
+.postagens-inferior .pesquisa-paginacao a:hover {
+  background: #faf5f7 !important;
+}
+
+/* Blog listing responsive */
+@media (max-width: 992px) {
+  .postagens-inferior .content-postagem {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .postagens-inferior .content-postagem {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* --- Blog Pagination Fix --- */
+html body .postagens-inferior .paginator {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+html body .postagens-inferior .paginator li {
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  overflow: visible !important;
+  flex-shrink: 0 !important;
+}
+html body .postagens-inferior .paginator li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 16px !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #8B1A4A !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  box-sizing: content-box !important;
+  flex-shrink: 0 !important;
+}
+html body .postagens-inferior .paginator li.selected {
+  border-color: #8B1A4A !important;
+  background: #8B1A4A !important;
+}
+html body .postagens-inferior .paginator li.selected a {
+  color: #fff !important;
+}
+html body .postagens-inferior .paginator li:not(.selected):hover {
+  border-color: #8B1A4A !important;
+  background: #f9f5f7 !important;
+}
+html body .postagens-inferior .paginator li.nav a {
+  padding: 10px 18px !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.03em !important;
+}
+/* =============================================
+   AVALIACOES DE CLIENTES PAGE
+   ============================================= */
+
+/* Top section - better background and spacing */
+.topo-avaliacao-loja {
+  background: linear-gradient(135deg, #f9f5f7 0%, #fff 100%) !important;
+  padding: 40px 0 !important;
+  border-bottom: 2px solid #8B1A4A !important;
+}
+
+.topo-avaliacao-loja .container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+/* Store logo in reviews */
+.topo-avaliacao-loja .logo-loja {
+  flex-shrink: 0 !important;
+}
+
+.topo-avaliacao-loja .logo-loja img {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Rating display */
+.topo-avaliacao-loja .avaliacoes-loja {
+  background: #fff !important;
+  padding: 16px 24px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+/* Review cards */
+.avaliacoes-gerais .lista-avalia {
+  border: 1px solid #eee !important;
+  border-radius: 12px !important;
+  padding: 20px 24px !important;
+  margin-bottom: 16px !important;
+  transition: box-shadow 0.3s ease !important;
+  background: #fff !important;
+}
+
+.avaliacoes-gerais .lista-avalia:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+}
+
+/* Review user info */
+.avaliacoes-gerais .dados-usuario-avalia {
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Review content */
+.avaliacoes-gerais .descricao-avaliacao-cliente {
+  color: #555 !important;
+  line-height: 1.7 !important;
+  font-size: 0.95rem !important;
+}
+
+/* General section title */
+.avaliacoes-gerais .container {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 40px 20px !important;
+}
+
+/* =============================================
+   APLICATIVO PAGE - Hide H1
+   ============================================= */
+
+/* Hide H1 on /aplicativo page (inside article in #main-area) */
+#main-area > article > div > h1 {
+  display: none !important;
+}

@@ -8,8 +8,8 @@ const metadata = process.env.PRODUCT_METADATA !== 'false';
 await mkdir(new URL('./artifacts/', import.meta.url), {recursive:true});
 for (const type of pages) {
   const html = await renderPage(type);
-  assert.ok(html.includes('novo-videira.css'), type);
-  assert.ok(html.includes('class="nv-header vn-header"'), type);
+  assert.ok(html.includes('videira-zip.css'), type);
+  assert.ok(html.includes('class="zip-header vn-header"'), type);
   assert.ok(html.includes('name="q"'), type);
   assert.ok(html.includes('id="vn-mobile"'), type);
   assert.ok(html.includes('instagram.com/videiravinhoteca/'), type);
@@ -18,17 +18,17 @@ for (const type of pages) {
   assert.equal(/{[{%]/.test(html.replace(/<script[\s\S]*?<\/script>/g,'')), false, type + ': Liquid não resolvido');
   if (type === 'index') {
     assert.ok(html.includes('BLACK'));
-    assert.ok(html.includes('Vinhos em caixas'));
-    assert.ok(html.includes('Compre por categoria'));
-    assert.equal((html.match(/class="nv-category nv-category--/g)||[]).length,7);
+    assert.equal(html.includes('Monte sua caixa de vinhos'),count>0);
+    assert.ok(html.includes('Compre por Categoria'));
+    assert.equal((html.match(/<div class="zip-category-row">([\s\S]*?)<\/div>/)?.[1].match(/<a /g)||[]).length,7);
     assert.equal(html.includes('id="selecao"'), count > 0);
     assert.equal(html.includes('id="paises"'), true);
-    assert.ok(html.includes('Tipos e uvas'));
+    assert.ok(html.includes('Harmonizações'));
     if(count > 0) assert.ok(html.includes('sf-wine-card'));
   }
   if(type === 'collection') {
     assert.equal(html.includes('class="sf-catalog-search"'), false);
-    assert.equal((html.match(/class="nv-search"/g)||[]).length,1);
+    assert.equal((html.match(/class="zip-search"/g)||[]).length,1);
   }
   if(type === 'product') {
     assert.ok(html.includes('data-product-variants'));
