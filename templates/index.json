@@ -5,10 +5,43 @@
       "settings": {
         "eyebrow": "NOVEMBRO NA VIDEIRA",
         "title": "BLACK",
-        "accent": "FRIDAY",
+        "accent": "VIDEIRA",
         "dates": "27 A 30 DE NOVEMBRO",
-        "intro": "Prepare sua seleção. Descontos em vinhos e caixas, com condições divulgadas em breve."
-      }
+        "intro": "Prepare sua seleção. Descontos em vinhos e caixas, com condições divulgadas em breve.",
+        "autoplay": true
+      },
+      "blocks": {
+        "selecao": {
+          "type": "campaign",
+          "settings": {
+            "title": "VINHOS",
+            "accent": "PARA VOCÊ",
+            "text": "Tintos, brancos, rosés e espumantes. Encontre seu próximo rótulo.",
+            "small": "DESCUBRA",
+            "large": "SABORES",
+            "note": "Da Videira para a sua mesa.",
+            "cta": "Explorar catálogo",
+            "theme": "wine"
+          }
+        },
+        "caixas": {
+          "type": "campaign",
+          "settings": {
+            "title": "SUA",
+            "accent": "SELEÇÃO",
+            "text": "Vai levar uma caixa? Converse com a Videira.",
+            "small": "ESCOLHA SUAS",
+            "large": "GARRAFAS",
+            "note": "Consulte as condições para caixas.",
+            "cta": "Ver os vinhos",
+            "theme": "cream"
+          }
+        }
+      },
+      "block_order": [
+        "selecao",
+        "caixas"
+      ]
     },
     "featured": {
       "type": "videira-featured",
@@ -49,21 +82,53 @@
             "title": "Espumantes",
             "category": "espumante"
           }
+        },
+        "destaques": {
+          "type": "category",
+          "settings": {
+            "title": "Destaques",
+            "category": "all"
+          }
+        },
+        "kits": {
+          "type": "category",
+          "settings": {
+            "title": "Kits e caixas",
+            "category": "kits"
+          }
+        },
+        "novidades": {
+          "type": "category",
+          "settings": {
+            "title": "Novidades",
+            "category": "new"
+          }
         }
       },
       "block_order": [
+        "destaques",
         "tinto",
+        "espumante",
         "branco",
         "rose",
-        "espumante"
+        "novidades",
+        "kits"
       ]
     },
-    "occasions": {
-      "type": "videira-pairings",
+    "kits": {
+      "type": "videira-kits",
       "settings": {}
     },
     "prices": {
       "type": "videira-price-ranges",
+      "settings": {}
+    },
+    "offers": {
+      "type": "videira-offers",
+      "settings": {}
+    },
+    "harmonizations": {
+      "type": "videira-harmonizations",
       "settings": {}
     },
     "new": {
@@ -77,26 +142,42 @@
     },
     "origins": {
       "type": "videira-origins",
-      "settings": {}
+      "settings": {},
+      "blocks": {
+        "argentina": {
+          "type": "origin",
+          "settings": {
+            "title": "Argentina",
+            "search_query": "vendor:\"Gascón\" OR vendor:\"Susana Balbo\" OR vendor:\"Mosquita Muerta\" OR vendor:\"Martino\" OR vendor:\"Puna\""
+          }
+        },
+        "chile": {
+          "type": "origin",
+          "settings": {
+            "title": "Chile",
+            "search_query": "vendor:\"Becas\""
+          }
+        },
+        "brasil": {
+          "type": "origin",
+          "settings": {
+            "title": "Brasil",
+            "search_query": "vendor:\"Casa Valduga\" OR vendor:\"Ponto Nero\""
+          }
+        }
+      },
+      "block_order": [
+        "argentina",
+        "chile",
+        "brasil"
+      ]
     },
-    "discover_wines": {
-      "type": "videira-carousel",
-      "settings": {
-        "title": "Explore nossos vinhos",
-        "eyebrow": "",
-        "limit": 10
-      }
-    },
-    "discover": {
-      "type": "videira-discover",
+    "brands": {
+      "type": "videira-brands",
       "settings": {}
     },
     "editorial": {
       "type": "videira-editorial",
-      "settings": {}
-    },
-    "offers": {
-      "type": "videira-offers",
       "settings": {}
     }
   },
@@ -104,13 +185,13 @@
     "hero",
     "featured",
     "types",
-    "occasions",
+    "kits",
     "prices",
     "offers",
+    "harmonizations",
     "new",
     "origins",
-    "discover_wines",
-    "discover",
+    "brands",
     "editorial"
   ]
 }

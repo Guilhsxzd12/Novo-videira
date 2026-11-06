@@ -1,22 +1,32 @@
-# Videira 2.0 · Estrutura comercial
+# Videira 3.0 · Reprodução da estrutura pública da Cia do Vinho
 
-Referência principal: [Cia do Vinho](https://www.ciadovinho.com.br/), consultada em 6 de novembro de 2026. Foram estudados a página inicial, categorias, catálogo e a organização dos atalhos de preço. A abertura direta do site pelo ambiente retornou bloqueio 403; a pesquisa usou o conteúdo indexado, imagens de categorias e páginas públicas acessíveis. Não houve comparação visual pixel a pixel. Fotos, logo e produtos usados no tema são da própria Videira.
+Referência: https://www.ciadovinho.com.br/, consultada em 6 de novembro de 2026. Nesta revisão foi possível acessar diretamente o HTML completo, a folha de estilos, a configuração pública dos menus e as imagens de referência. Também foram estudados catálogo e produto. O código do tema é uma implementação própria em Liquid/Shopify; nenhum script do backend da outra loja é carregado.
 
-## Estrutura
+## Correspondências implementadas
 
-A loja prioriza campanha, produtos e navegação: banner amplo, vitrine principal, quatro categorias fotográficas, destaque para compra em caixas, faixas de preço, ofertas reais, novidades, origens, outras vitrines e marcas. Informações institucionais e dúvidas ficam no fim.
+| Área pública da referência | Implementação Videira |
+| --- | --- |
+| Faixa superior, logo, busca, conta e carrinho | Cabeçalho comercial com identidade Videira e minicarrinho nativo. |
+| Menus com subcategorias | Campanha, lançamentos, kits, faixas de preço, países, tipos, uvas e marcas. |
+| Banner panorâmico preto e dourado | Campanha Black Videira com datas próprias; slides adicionais, setas, indicadores e pausa. |
+| Vitrines e títulos centralizados entre linhas | Prateleiras com quatro cards no computador e duas colunas no celular. |
+| Sete atalhos verticais de categoria | Destaques, tintos, espumantes, brancos, rosés, novidades e caixas, com fotos do catálogo. |
+| Kits, quatro faixas de preço e ofertas | Coleção de kits quando configurada; atendimento para caixas; filtros de preço e descontos reais. |
+| Harmonizações e origens | Sete categorias gastronômicas fotográficas; países com bandeiras e buscas configuráveis. |
+| Marcas e conteúdo de apoio | Marcas do catálogo, informações, dúvidas, serviços, newsletter e rodapé completo. |
+| Catálogo com filtros em coluna | Filtros nativos Shopify no desktop e painel modal no celular; ordenação e paginação reais. |
+| Produto com imagem e painel de compra | Galeria, variantes, quantidade, preço, resumo técnico, carrinho, descrição e informações de entrega. |
 
-- Cabeçalho de largura total com busca central e navegação direta. Sem cápsula flutuante.
-- No celular o cabeçalho rola junto com a página, deixando os títulos e produtos visíveis.
-- Fundo branco, bordô da marca e dourado nos detalhes; títulos em fonte sem serifa, com maior contraste e menor espaço entre seções.
-- Cards preservados em seu formato. Na vitrine mobile, duas colunas completas, sem cortar a segunda coluna.
-- Banner de Black Friday de 27 a 30 de novembro, com comunicação de preparação e condições em breve. É substituível por artes de desktop e celular no editor Shopify.
-- Fotos reais dos produtos vêm da Shopify; não há garrafas vetoriais decorativas na página inicial.
+Montserrat local é a fonte principal da interface, alinhada à referência. O fundo é branco; as áreas de identidade usam bordô `#651242` e dourado. Os cards de produto mantêm a estrutura da Videira, com nova distribuição na vitrine.
 
-## Categorias e dados
+## Catálogo e condições da Videira
 
-O catálogo público atual da Videira possui 38 produtos sem `product_type`. A navegação por categoria não depende mais desse campo: quatro blocos permanentes permitem selecionar coleções e imagens no editor. Sem seleção, usam busca por termos explícitos de tipo/uva nos títulos. As fotos de exemplo são encontradas no próprio catálogo por esses termos. Isso é uma alternativa de navegação, não uma classificação técnica definitiva; coleções configuradas são mais precisas.
+Preços, estoque e formas de pagamento vêm da Shopify. Não foram copiados cupons, cashback, avaliações, brindes, parcelamento ou frete grátis da Cia do Vinho. Newsletter usa o formulário nativo de clientes da Shopify. Frete é calculado no checkout conforme a configuração real da loja.
 
-Faixas de preço aparecem somente quando o filtro nativo de preço está disponível. A seção de ofertas inclui apenas produtos cujo preço de comparação é maior que o preço atual. Nenhum desconto, parcelamento ou benefício de frete é inventado. Marcas de pagamento só aparecem se a Shopify informar que estão habilitadas.
+Produtos atuais sem tipo cadastrado usam buscas por termos no título como alternativa. Coleções escolhidas no editor são a opção mais precisa. Países possuem buscas de fornecedores de referência configuráveis; novas marcas podem exigir atualização dessas coleções/buscas.
 
-A prévia usa um retrato dos dados públicos da Videira, com fotos locais para funcionar offline. Os valores e a disponibilidade da loja em produção continuam vindo exclusivamente da Shopify.
+## Imagens e licenças
+
+Logo, foto de brinde e fotos de produtos são da Videira. Fotografias gastronômicas são do Unsplash; fontes e créditos estão em `assets/media-credits.txt`. Montserrat é distribuída sob SIL Open Font License, incluída no tema. Os banners comerciais da outra loja foram analisados como referência, sem reutilizar sua marca ou condições de venda.
+
+Não foi realizada comparação pixel a pixel em navegador neste ambiente. A apresentação completa deve ser conferida na prévia Shopify, incluindo os dados, menus e políticas reais.

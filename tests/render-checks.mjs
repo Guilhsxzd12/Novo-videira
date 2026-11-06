@@ -18,12 +18,12 @@ for (const type of pages) {
   assert.equal(/{[{%]/.test(html.replace(/<script[\s\S]*?<\/script>/g,'')), false, type + ': Liquid não resolvido');
   if (type === 'index') {
     assert.ok(html.includes('BLACK'));
-    assert.ok(html.includes('Vai levar'));
+    assert.ok(html.includes('Vinhos em caixas'));
     assert.ok(html.includes('Compre por categoria'));
-    assert.equal((html.match(/class="nv-category nv-category--/g)||[]).length,4);
+    assert.equal((html.match(/class="nv-category nv-category--/g)||[]).length,7);
     assert.equal(html.includes('id="selecao"'), count > 0);
-    assert.equal(html.includes('id="paises"'), count > 0 && metadata);
-    assert.equal(html.includes('id="uvas"'), count > 0 && metadata);
+    assert.equal(html.includes('id="paises"'), true);
+    assert.ok(html.includes('Tipos e uvas'));
     if(count > 0) assert.ok(html.includes('sf-wine-card'));
   }
   if(type === 'collection') {
@@ -38,6 +38,7 @@ for (const type of pages) {
   }
   await writeFile(new URL(`./artifacts/${type}.html`, import.meta.url), html);
 }
+const noFilterContext=globals('collection');noFilterContext.collection={...noFilterContext.collection,filters:[]};const noFilters=await renderSection('main-collection',noFilterContext);assert.equal(noFilters.includes('class="nv-catalog-sidebar"'),false);
 const accountContext = globals('index');
 accountContext.shop.customer_accounts_enabled = true;
 const header = await renderSection('videira-header', accountContext, {announcement:''});

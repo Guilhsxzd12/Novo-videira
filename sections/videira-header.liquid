@@ -12,7 +12,7 @@
   endfor
 %}
 {% if section.settings.announcement != blank %}<div class="nv-announcement">{{ section.settings.announcement | escape }}</div>{% endif %}
-<header class="nv-header vn-header">
+<div class="nv-ticker" aria-label="Informações da loja"><span>VINHOS NACIONAIS E IMPORTADOS</span><span>GARRAFAS E CAIXAS</span><a href="{{ routes.root_url }}#faq">ATENDIMENTO VIDEIRA</a></div><header class="nv-header vn-header">
   <div class="nv-header-main">
     <a class="nv-brand" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} — início">{% render 'logo' %}</a>
     <form class="nv-search" action="{{ routes.search_url }}" method="get" role="search">
@@ -26,13 +26,11 @@
       <button class="nv-menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="vn-mobile" aria-label="Abrir menu">{% render 'icon', name: 'menu' %}</button>
     </div>
   </div>
-  <nav class="nv-navigation" aria-label="Navegação principal">
-<details class="nv-nav-group vn-group"><summary>{% render 'icon', name: 'menu' %} <strong>Todos os vinhos</strong> <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown"><a href="{{ catalog_url }}">Catálogo completo</a>{% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}{% render 'icon', name: 'arrow' %}</a>{% endfor %}</div></details>
-{% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}</a>{% endfor %}
-<a href="{{ countries_url }}">Países</a><a href="{{ routes.root_url }}#bodegas">Bodegas</a>
-{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}
-<a class="nv-nav-help" href="{{ routes.root_url }}#faq">{% render 'icon', name: 'chat' %} Atendimento</a>
-</nav>
+  <nav class="nv-navigation" aria-label="Navegação principal"><a class="nv-menu-campaign" href="{{ routes.root_url }}#black-videira">BLACK VIDEIRA</a><a href="{{ catalog_url }}?sort_by=created-descending">Lançamentos</a><a href="{{ routes.root_url }}#caixas">Kits</a>
+<details class="nv-nav-group vn-group"><summary>Preços ⌄</summary><div class="nv-dropdown"><a href="{{ catalog_url }}?filter.v.price.lte=50">Até R$ 50</a><a href="{{ catalog_url }}?filter.v.price.gte=50&amp;filter.v.price.lte=100">R$ 50 a R$ 100</a><a href="{{ catalog_url }}?filter.v.price.gte=100&amp;filter.v.price.lte=200">R$ 100 a R$ 200</a><a href="{{ catalog_url }}?filter.v.price.gte=200">Acima de R$ 200</a></div></details>
+<details class="nv-nav-group vn-group"><summary>Países ⌄</summary><div class="nv-dropdown"><a href="{{ routes.root_url }}#paises">Todos os países</a><a href="{{ routes.search_url }}?type=product&amp;q=vendor%3A%22Gasc%C3%B3n%22%20OR%20vendor%3A%22Susana%20Balbo%22%20OR%20vendor%3A%22Mosquita%20Muerta%22%20OR%20vendor%3A%22Martino%22%20OR%20vendor%3A%22Puna%22">Argentina</a><a href="{{ routes.search_url }}?type=product&amp;q=vendor%3ABecas">Chile</a><a href="{{ routes.search_url }}?type=product&amp;q=vendor%3A%22Casa%20Valduga%22%20OR%20vendor%3A%22Ponto%20Nero%22">Brasil</a></div></details>
+<details class="nv-nav-group vn-group"><summary>Tipos e uvas ⌄</summary><div class="nv-dropdown nv-mega"><div><strong>Tipos de vinho</strong>{% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}</a>{% endfor %}</div><div><strong>Uvas</strong>{% assign grapes = 'Malbec,Cabernet Sauvignon,Chardonnay,Sauvignon Blanc,Merlot,Pinot Noir' | split: ',' %}{% for grape in grapes %}<a href="{{ routes.search_url }}?type=product&amp;q={{ grape | url_encode }}">{{ grape }}</a>{% endfor %}</div></div></details>
+<details class="nv-nav-group vn-group"><summary>Marcas ⌄</summary><div class="nv-dropdown">{% for vendor in shop.vendors limit: 12 %}<a href="{{ vendor | url_for_vendor }}">{{ vendor | escape }}</a>{% endfor %}</div></details>{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}<a href="{{ routes.all_products_collection_url }}">Todos os vinhos</a><a class="nv-nav-help" href="{{ routes.root_url }}#faq">Atendimento</a></nav>
   <nav id="vn-mobile" class="nv-mobile" hidden aria-label="Menu para celular">
     <a href="{{ catalog_url }}">Todos os vinhos {% render 'icon', name: 'arrow' %}</a>
     {% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}</a>{% endfor %}

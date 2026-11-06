@@ -1,0 +1,2 @@
+{% if shop.vendors.size > 0 %}<section id="bodegas" class="nv-brands nv-container"><div class="nv-section-heading"><h2>Marcas</h2></div><div class="nv-brand-grid">{% for vendor in shop.vendors %}<a href="{{ vendor | url_for_vendor }}">{{ vendor | escape }}</a>{% endfor %}</div></section>{% endif %}
+{% schema %}{"name":"Videira · Marcas","settings":[],"presets":[{"name":"Videira · Marcas"}]}{% endschema %}

@@ -32,9 +32,9 @@ try {
         await page.goto('http://127.0.0.1:4174/');
         await page.evaluate(() => document.fonts.ready);
         assert.equal(await page.locator('#selecao').count(), scenario.count ? 1 : 0);
-        assert.equal(await page.locator('main .wc-section').count(), scenario.count > 1 ? 3 : scenario.count);
-        assert.equal(await page.locator('#paises').count(), scenario.metadata ? 1 : 0);
-        assert.equal(await page.locator('#uvas').count(), scenario.metadata ? 1 : 0);
+        assert.equal(await page.locator('main .wc-section').count(), scenario.count > 1 ? 3 : scenario.count ? 2 : 0);
+        assert.equal(await page.locator('#paises').count(), 1);
+        assert.equal(await page.locator('#uvas').count(), 0);
         assert.equal(await page.locator('#bodegas').count(), scenario.count ? 1 : 0);
         assert.equal(await page.locator('main').evaluate(el => /[↗➡↘]/u.test(el.innerText)), false);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);

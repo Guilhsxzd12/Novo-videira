@@ -16,12 +16,13 @@ for (const file of ['videira.css','shopify-integration.css','novo-videira.css'])
   const content=await readFile(new URL('../assets/'+file,import.meta.url),'utf8');
   standalone=standalone.replace('<link rel="stylesheet" href="../assets/'+file+'">','<style data-source="'+file+'">'+content+'</style>');
 }
-for(const file of ['poppins-300.ttf','poppins-400.ttf','poppins-600.ttf','poppins-700.ttf','videira-hero.jpg','videira-logo.svg']) {
+for(const file of ['poppins-300.ttf','poppins-400.ttf','poppins-600.ttf','poppins-700.ttf','videira-hero.jpg','videira-logo.svg','montserrat-variable.ttf','harmonizacao-carnes.jpg','harmonizacao-pizza.jpg','harmonizacao-massas.jpg','harmonizacao-queijos.jpg','harmonizacao-orientais.jpg','harmonizacao-peixes.jpg','harmonizacao-carnes-brancas.jpg']) {
   const content=await readFile(new URL('../assets/'+file,import.meta.url));
   const mime=file.endsWith('.ttf')?'font/ttf':file.endsWith('.jpg')?'image/jpeg':'image/svg+xml';
-  standalone=standalone.replaceAll('../assets/'+file,'data:'+mime+';base64,'+content.toString('base64'));
+  const encoded='data:'+mime+';base64,'+content.toString('base64');
+  standalone=standalone.replaceAll('../assets/'+file,encoded).replaceAll("url('"+file+"')","url('"+encoded+"')");
 }
-for(const [src,relative] of [['../assets/videira.js','../assets/videira.js'],['preview.js','../docs/preview.js']]) {
+for(const [src,relative] of [['../assets/videira.js','../assets/videira.js'],['../assets/videira-store.js','../assets/videira-store.js'],['preview.js','../docs/preview.js']]) {
   const content=await readFile(new URL(relative,import.meta.url),'utf8');
   standalone=standalone.replace('<script src="'+src+'" defer></script>','<script>'+content+'</script>');
 }

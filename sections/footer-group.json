@@ -5,9 +5,19 @@
     "footer": {
       "type": "videira-footer",
       "settings": {}
+    },
+    "services": {
+      "type": "videira-services",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "videira-newsletter",
+      "settings": {}
     }
   },
   "order": [
+    "newsletter",
+    "services",
     "footer"
   ]
 }

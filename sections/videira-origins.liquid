@@ -2,7 +2,7 @@
   {% if section.blocks.size > 0 %}
     {% for block in section.blocks %}
       {% assign origin_title = block.settings.title | default: block.settings.collection.title %}
-      {% if origin_title != blank %}<a href="{{ block.settings.collection.url | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}><strong>{{ origin_title | escape }}</strong><span>{{ block.settings.subtitle | escape }}</span>{% render 'icon', name: 'arrow' %}</a>{% endif %}
+      {% if origin_title != blank %}{% capture default_origin_url %}{{ routes.search_url }}?type=product&amp;q={{ block.settings.search_query | default: origin_title | url_encode }}{% endcapture %}<a href="{{ block.settings.collection.url | default: default_origin_url }}" {{ block.shopify_attributes }}>{% render 'country-flag', code: origin_title %}<strong>{{ origin_title | escape }}</strong><span>{{ block.settings.subtitle | escape }}</span>{% render 'icon', name: 'arrow' %}</a>{% endif %}
     {% endfor %}
   {% else %}
     {% assign seen = '|' %}
@@ -18,5 +18,5 @@
 <section id="paises" class="nv-origins"><div class="nv-origin-layout nv-container"><div class="nv-origin-intro"><p class="nv-eyebrow">CADA ORIGEM, UMA HISTÓRIA</p><h2>Encontre por país</h2><p>Encontre seu vinho pelo lugar de onde ele vem.</p><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Ver todos {% render 'icon', name: 'arrow' %}</a></div><div class="nv-origin-grid">{{ origin_links }}</div></div></section>
 {% endif %}
 {% schema %}
-{"name":"Videira · Origens","settings":[],"blocks":[{"type":"origin","name":"Origem","settings":[{"type":"collection","id":"collection","label":"Coleção"},{"type":"text","id":"title","label":"País"},{"type":"text","id":"subtitle","label":"Regiões"}]}],"presets":[{"name":"Videira · Origens"}]}
+{"name":"Videira · Origens","settings":[],"blocks":[{"type":"origin","name":"Origem","settings":[{"type":"collection","id":"collection","label":"Coleção"},{"type":"text","id":"title","label":"País"},{"type":"text","id":"subtitle","label":"Regiões"},{"type":"text","id":"search_query","label":"Busca alternativa"}]}],"presets":[{"name":"Videira · Origens"}]}
 {% endschema %}

@@ -8,7 +8,7 @@ const count = Number(process.env.PRODUCT_COUNT ?? 6);
 const metadata = process.env.PRODUCT_METADATA !== 'false';
 const port = Number(process.env.PORT ?? 4174);
 const locale=JSON.parse(fs.readFileSync(dir+'/locales/pt-BR.default.json'));
-const preprocess=s=>s.replace(/{%\s*render /g,'{% include ').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g,'').replace(/{%\s*form\s+([^%]+)%}/g,(_,args)=>`<form method="post" action="/cart/add" ${args.includes('data-shopify-add')?'data-shopify-add':''} ${args.includes('videira-product-form')?'id="videira-product-form"':''}>`).replace(/{%\s*endform\s*%}/g,'</form>').replace(/{%\s*paginate[^%]+%}/g,'').replace(/{%\s*endpaginate\s*%}/g,'');
+const preprocess=s=>s.replace(/{%\s*render /g,'{% include ').replace(/{%\s*(schema|doc)\s*%}[\s\S]*?{%\s*end\1\s*%}/g,'').replace(/{%\s*form\s+([^%]+)%}/g,(_,args)=>`<form method="post" action="${args.includes("customer")?"/contact":"/cart/add"}" ${args.includes('data-shopify-add')?'data-shopify-add':''} ${args.includes('videira-product-form')?'id="videira-product-form"':''}>`).replace(/{%\s*endform\s*%}/g,'</form>').replace(/{%\s*paginate[^%]+%}/g,'').replace(/{%\s*endpaginate\s*%}/g,'');
 const engine=new Liquid({root:dir+'/snippets',extname:'.liquid',fs:{existsSync:fs.existsSync,exists:async p=>fs.existsSync(p),readFileSync:p=>preprocess(fs.readFileSync(p,'utf8')),readFile:async p=>preprocess(fs.readFileSync(p,'utf8')),resolve:(root,file,ext)=>path.resolve(root,file.endsWith(ext)?file:file+ext),dirname:path.dirname,sep:path.sep}});
 engine.registerFilter('t',(key,args)=>{let value=key.split('.').reduce((obj,k)=>obj?.[k],locale);if(typeof value==='object')value=value.other;return String(value??key).replace('{{ count }}',args?.count??'1')});
 engine.registerFilter('asset_url',s=>'/assets/'+s);
@@ -50,7 +50,8 @@ export async function renderPage(type){
   const headerConfig=JSON.parse(fs.readFileSync(dir+'/sections/header-group.json'));
   const headerSettings=Object.values(headerConfig.sections).find(s=>s.type==='videira-header')?.settings||{};
   const header='<div class="shopify-section shopify-section-group-header-group nv-header-section">'+await renderSection('videira-header',context,headerSettings)+'</div>';
-  const footer=await renderSection('videira-footer',context);
+  const footerConfig=JSON.parse(fs.readFileSync(dir+'/sections/footer-group.json'));
+  let footer='';for(const id of footerConfig.order){const section=footerConfig.sections[id];footer+=await renderSection(section.type,context,section.settings||{});}
   let layout=preprocess(fs.readFileSync(dir+'/layout/theme.liquid','utf8')).replace("{% sections 'header-group' %}",header).replace("{% sections 'footer-group' %}",footer);
   return engine.parseAndRender(layout,{...context,content_for_layout:body});
 }

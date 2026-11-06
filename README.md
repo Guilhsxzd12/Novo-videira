@@ -36,3 +36,9 @@ No editor de temas:
 - [Verificações locais](tests/README.md).
 
 O ZIP contém somente as pastas de tema. Documentação, testes e fotos de referência ficam fora dele. Os dados públicos em `tests/catalog-preview.json` são apenas para a prévia; o tema publicado lê os dados reais da Shopify.
+
+## Versão 3.0 · estrutura completa da referência
+
+A apresentação foi ampliada a partir da inspeção direta do HTML e dos estilos públicos da Cia do Vinho: navegação com subcategorias, banner panorâmico com três slides, sete categorias verticais, kits, preços, ofertas, sete harmonizações, países com bandeiras, marcas, newsletter e rodapé com serviços. O catálogo possui filtros laterais no computador; a página do produto recebeu resumo técnico e apoio de entrega.
+
+A newsletter usa o formulário nativo `customer` da Shopify. O cálculo real de frete e o checkout continuam sob as configurações da Videira. As condições promocionais da outra loja não foram transferidas. Artes e textos dos slides adicionais podem ser editados em **Campanha**; o movimento pode ser pausado e respeita redução de movimento.
