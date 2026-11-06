@@ -1,40 +1,38 @@
-# Novo Videira · Tema Shopify
+# Novo Videira · Shopify 2.0
 
-Novo design do e-commerce da Videira Vinhoteca. Tema Shopify Online Store 2.0 em Liquid, independente da loja atual.
+Tema de e-commerce da Videira Vinhoteca, com estrutura comercial baseada na [Cia do Vinho](https://www.ciadovinho.com.br/), identidade bordô/dourada e fotos do próprio catálogo.
 
-## Direção do design
+## Esta versão
 
-Fundo claro, bordô da Videira e dourado discreto. Cabeçalho compacto com busca sempre visível, navegação por tipo de vinho, país, uva e bodega. A página inicial aproxima a apresentação da marca da descoberta de produtos.
+- Cabeçalho de largura total, busca em destaque e navegação direta por tipos de vinho.
+- No celular, cabeçalho acompanha a rolagem e não cobre produtos ou títulos.
+- Banner comercial de Black Friday, de **27 a 30 de novembro**, substituível por artes próprias.
+- Vitrines de produtos, categorias com fotografias, caixas, faixas de preço, ofertas reais, novidades e bodegas.
+- Formato dos cards mantido; vitrines mostram duas colunas completas no celular.
+- Catálogo sem a segunda busca duplicada.
+- Fundo branco e títulos comerciais sem serifa. Conteúdo institucional compacto no final.
+- Carrinho, preços, estoque, variantes e checkout nativos da Shopify.
 
-O componente `snippets/product-card.liquid` e as regras de formato dos cards foram preservados do tema original: fotografia, origem, bodega, uva, preço e botão de compra. Os produtos, variantes, preços, disponibilidade e checkout continuam vindo da Shopify.
+## Aplicar na Shopify
 
-## Instalar na Shopify depois
+Conecte **Guilhsxzd12/Novo-videira → main** na biblioteca de temas ou envie [novo-videira-shopify.zip](downloads/novo-videira-shopify.zip). Se o tema já está conectado a este repositório, confira a sincronização da branch `main`.
 
-1. Em **Loja virtual → Temas → Adicionar tema → Conectar ao GitHub**, escolha **Guilhsxzd12/Novo-videira → main**. Isso deve criar um tema separado na biblioteca.
-2. Alternativa: envie o arquivo **[novo-videira-shopify.zip](downloads/novo-videira-shopify.zip)**. Ele contém somente as pastas do tema, prontas para importação.
-3. Abra **Personalizar** e configure as coleções de **Escolhas da Videira**, **Novidades** e **Mais rótulos para descobrir**. Sem coleção definida, as vitrines usam o catálogo disponível.
-4. Em **Ocasiões**, associe uma coleção a cada bloco. Sem associação, o bloco abre o catálogo completo. Os textos e destinos são configuráveis.
-5. Em **Origens**, configure blocos com países e coleções reais. Sem blocos, a seção identifica países nos metacampos dos primeiros 50 produtos disponíveis para Liquid. Os atalhos automáticos de país/uva usam a busca da loja, que depende do conteúdo indexado; coleções configuradas são a opção mais precisa.
-6. Configure o menu adicional do cabeçalho, o menu do rodapé, as políticas e o WhatsApp. A faixa superior e o banner principal podem ser editados no editor de temas. A identidade permite escolher bordô, dourado, fundo e logo.
-7. Habilite os filtros no **Shopify Search & Discovery** e confira a prévia no celular e no computador. Teste busca, carrinho, variantes, frete e checkout com o catálogo real antes de publicar.
+No editor de temas:
 
-**Nada deste repositório foi publicado na loja atual.** O usuário fará a aplicação e publicação do tema na Shopify.
+1. Em **Campanha**, personalize textos e datas ou envie artes de computador e celular. A campanha não configura descontos no checkout.
+2. Em **Categorias**, associe coleções reais para Tintos, Brancos, Rosés e Espumantes; imagens são opcionais. Sem coleções, os links usam busca por termos nos títulos, pois os produtos atuais estão sem tipo cadastrado.
+3. Escolha coleções para **Destaques da Videira**, **Novidades** e **Explore nossos vinhos**. Sem configuração, usam o catálogo.
+4. Configure os países em **Origens**, com coleções de destino. Sem blocos, a seção depende dos metacampos dos produtos disponíveis para Liquid.
+5. Habilite filtros no Shopify Search & Discovery. A seção de preços só aparece quando o filtro nativo de preço está disponível.
+6. Confira WhatsApp, menus, políticas, busca, imagens, variantes, carrinho, frete e checkout na prévia antes de publicar.
 
-## Incluído
+**Nenhuma alteração foi enviada ao repositório antigo Shopify-Videira nem publicada diretamente pelo assistente na Shopify.** Se o novo repositório estiver vinculado a um tema, a aplicação depende da sincronização configurada na loja.
 
-- Cabeçalho com busca de produtos, menus acessíveis por clique/teclado e navegação para celular.
-- Banner principal editável, atalhos por tipo, vitrines, ocasiões, origens, uvas e bodegas.
-- Catálogo com filtros e ordenação nativos; página do vinho com variantes e ficha técnica.
-- Adição de produtos via Ajax Cart API, carrinho lateral e formulários nativos de compra.
-- Rodapé com Instagram **@videiravinhoteca**, informações e políticas da loja.
-- Aviso de maioridade, foco visível, descrições de imagem e respeito a movimento reduzido.
-- Sem preços fictícios, descontos automáticos ou campanha de Black Friday ativada.
+## Prévia e documentação
 
-## Documentação e validação
-
-- [Estudo das referências e decisões de design](docs/design.md).
-- [Validação realizada e limites](docs/validacao.md).
+- `docs/preview.html`: abrir após baixar o repositório completo. Fotos e dados de referência são da Videira; compra e busca exibem aviso de demonstração.
+- [Estudo e decisões](docs/design.md).
+- [Validação e limites](docs/validacao.md).
 - [Verificações locais](tests/README.md).
-- [Configuração das contas de cliente](docs/contas-cliente.md).
 
-Base: `Guilhsxzd12/Shopify-Videira`, commit `8bbe6d9c2fc1a1d6f0e9e6276dd6533f0c781f94`. A loja e o repositório anteriores não foram modificados por este redesign.
+O ZIP contém somente as pastas de tema. Documentação, testes e fotos de referência ficam fora dele. Os dados públicos em `tests/catalog-preview.json` são apenas para a prévia; o tema publicado lê os dados reais da Shopify.

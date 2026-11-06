@@ -13,14 +13,14 @@
 <link rel="stylesheet" href="../assets/videira.css">
 <link rel="stylesheet" href="../assets/shopify-integration.css">
 <link rel="stylesheet" href="../assets/novo-videira.css">
-<style>:root{--nv-wine:#651242;--nv-gold:#b59758;--nv-paper:#fcfaf6}</style>
+<style>:root{--nv-wine:#651242;--nv-gold:#b59758;--nv-paper:#ffffff}</style>
 <script src="../assets/videira.js" defer></script>
 <script type="application/json" id="videira-config">{"root":"/","cart":"/cart","add":"Adicionar ao carrinho","soldOut":"Indisponível","added":"Vinho adicionado ao carrinho.","error":"Não foi possível adicionar o vinho. Tente novamente.","cartError":"Não foi possível carregar o carrinho. Abra a página do carrinho para continuar."}</script>
 
 <script src="preview.js" defer></script></head><body class="storefront template-index">
 <a class="sf-skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="shopify-section shopify-section-group-header-group nv-header-section">
-<div class="nv-announcement">Vinhos com identidade. Momentos que ficam. · Foz do Iguaçu, PR</div>
+<div class="nv-announcement">VIDEIRA VINHOTECA · VINHOS NACIONAIS E IMPORTADOS</div>
 <header class="nv-header vn-header">
   <div class="nv-header-main">
     <a class="nv-brand" href="/" aria-label="Videira Vinhoteca — início">
@@ -29,7 +29,7 @@
 </a>
     <form class="nv-search" action="/search" method="get" role="search">
       <input type="hidden" name="type" value="product">
-      <input type="search" name="q" value="Cabernet" placeholder="Qual vinho vamos descobrir hoje?" aria-label="Buscar por vinho, uva, país ou bodega">
+      <input type="search" name="q" value="Cabernet" placeholder="Busque por vinho, uva ou bodega" aria-label="Buscar por vinho, uva, país ou bodega">
       <button type="submit" aria-label="Pesquisar vinhos">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
 
@@ -48,45 +48,37 @@
     </div>
   </div>
   <nav class="nv-navigation" aria-label="Navegação principal">
-    <a class="nv-all-wines" href="/collections/all">
+<details class="nv-nav-group vn-group"><summary>
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
 
- Todos os vinhos</a>
-    <details class="nv-nav-group vn-group"><summary>Tipos de vinho <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown"><a href="/collections/types?q=Tinto">Tinto
+ <strong>Todos os vinhos</strong> <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown"><a href="/collections/all">Catálogo completo</a><a href="/search?type=product&amp;q=title%3ATinto+OR+title%3AMalbec+OR+title%3ACabernet+OR+title%3AMerlot+OR+title%3ACarm%C3%A9n%C3%A8re+OR+title%3ASyrah+OR+title%3A%22Pinot+Noir%22">Tintos
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><a href="/collections/types?q=Branco">Branco
+</a><a href="/search?type=product&amp;q=title%3ABranco+OR+title%3AChardonnay+OR+title%3A%22Sauvignon+Blanc%22+OR+title%3ATorront%C3%A9s+OR+title%3A%22Pinot+Grigio%22">Brancos
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><a href="/collections/types?q=Ros%C3%A9">Rosé
+</a><a href="/search?type=product&amp;q=title%3ARos%C3%A9+OR+title%3ARose+OR+title%3ARosado">Rosés
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><a href="/collections/types?q=Espumante">Espumante
+</a><a href="/search?type=product&amp;q=title%3AEspumante+OR+title%3ABrut+OR+title%3AMoscatel+OR+title%3ACelebration">Espumantes
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><a href="/collections/all">Ver todos os vinhos</a></div></details>
-    <a href="#paises">Países</a><a href="#uvas">Uvas</a>
-    <details class="nv-nav-group vn-group"><summary>Bodegas <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown"><a href="/collections/vendors?q=Casa%20Valduga">Casa Valduga
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+</a></div></details>
+<a href="/search?type=product&amp;q=title%3ATinto+OR+title%3AMalbec+OR+title%3ACabernet+OR+title%3AMerlot+OR+title%3ACarm%C3%A9n%C3%A8re+OR+title%3ASyrah+OR+title%3A%22Pinot+Noir%22">Tintos</a><a href="/search?type=product&amp;q=title%3ABranco+OR+title%3AChardonnay+OR+title%3A%22Sauvignon+Blanc%22+OR+title%3ATorront%C3%A9s+OR+title%3A%22Pinot+Grigio%22">Brancos</a><a href="/search?type=product&amp;q=title%3ARos%C3%A9+OR+title%3ARose+OR+title%3ARosado">Rosés</a><a href="/search?type=product&amp;q=title%3AEspumante+OR+title%3ABrut+OR+title%3AMoscatel+OR+title%3ACelebration">Espumantes</a>
+<a href="/collections/all">Países</a><a href="#bodegas">Bodegas</a>
 
-</a><a href="/collections/vendors?q=Bodega%20Videira">Bodega Videira
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-</a><a href="#bodegas">Explorar bodegas</a></div></details>
-    
-    <a href="#sobre">A Videira</a>
-    <a class="nv-nav-help" href="#faq">
+<a class="nv-nav-help" href="#faq">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 1-8 8H6l-4 3 1-7a8 8 0 1 1 17-4Z"/><path d="M8 10h8M8 14h5"/></svg>
 
- Precisa de ajuda?</a>
-  </nav>
+ Atendimento</a>
+</nav>
   <nav id="vn-mobile" class="nv-mobile" hidden aria-label="Menu para celular">
     <a href="/collections/all">Todos os vinhos 
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
 </a>
-    <a href="/collections/types?q=Tinto">Tinto</a><a href="/collections/types?q=Branco">Branco</a><a href="/collections/types?q=Ros%C3%A9">Rosé</a><a href="/collections/types?q=Espumante">Espumante</a>
-    <a href="#paises">Países</a><a href="#uvas">Uvas</a><a href="#bodegas">Bodegas</a>
+    <a href="/search?type=product&amp;q=title%3ATinto+OR+title%3AMalbec+OR+title%3ACabernet+OR+title%3AMerlot+OR+title%3ACarm%C3%A9n%C3%A8re+OR+title%3ASyrah+OR+title%3A%22Pinot+Noir%22">Tintos</a><a href="/search?type=product&amp;q=title%3ABranco+OR+title%3AChardonnay+OR+title%3A%22Sauvignon+Blanc%22+OR+title%3ATorront%C3%A9s+OR+title%3A%22Pinot+Grigio%22">Brancos</a><a href="/search?type=product&amp;q=title%3ARos%C3%A9+OR+title%3ARose+OR+title%3ARosado">Rosés</a><a href="/search?type=product&amp;q=title%3AEspumante+OR+title%3ABrut+OR+title%3AMoscatel+OR+title%3ACelebration">Espumantes</a>
+    <a href="/collections/all">Países</a><a href="/collections/all">Uvas</a><a href="#bodegas">Bodegas</a>
     
     <a href="#sobre">A Videira</a><a href="#faq">Entregas e atendimento</a>
     
@@ -94,101 +86,17 @@
 </header>
 
 </div>
-<main id="conteudo" class="nv-home"><div class="shopify-section"><section class="nv-hero nv-container">
-  <div class="nv-hero-copy">
-    <p class="nv-eyebrow">A SUA PRÓXIMA DESCOBERTA</p>
-    <h1>O próximo brinde <em>começa aqui.</em></h1>
-    <p class="nv-hero-intro">Encontre vinhos com origem, personalidade e lugar à sua mesa. Explore os rótulos e descubra o seu próximo favorito.</p>
-    <div class="nv-hero-actions"><a class="nv-button" href="/collections/all">Explore os vinhos 
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+<main id="conteudo" class="nv-home"><div class="shopify-section">
+<section class="nv-campaign" aria-label="Campanha Videira">
 
-</a><a class="nv-text-link" href="#sobre">Conheça a Videira</a></div>
-    <div class="nv-hero-signature"><span aria-hidden="true">✦</span> Para quem gosta de escolher bem.</div>
-  </div>
-  <div class="nv-hero-image">
-    <img src="../assets/videira-hero.jpg" alt="Taças de vinho reunidas em um brinde à mesa" width="1600" height="1067" fetchpriority="high">
-    <div class="nv-photo-note"><span>BOAS ESCOLHAS. BONS ENCONTROS.</span><p>O vinho é só o começo.</p></div>
-  </div>
-</section>
-
-</div><div class="shopify-section"><section class="nv-benefits nv-container" aria-label="Comprar na Videira">
-  <div>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l1 7a6 6 0 0 1-12 0l1-7ZM12 16v6m-4 0h8M6 9h12"/></svg>
-
-<p><strong>Vinhos com identidade</strong><span>Explore origens, uvas e bodegas.</span></p></div>
-  <div>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-
-<p><strong>Sua seleção, do seu jeito</strong><span>Escolha os rótulos e as quantidades.</span></p></div>
-  <div>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h12v12H2zM14 10h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-
-<p><strong>Entrega para o seu endereço</strong><span>Consulte frete e prazo no checkout.</span></p></div>
-  <a href="#faq">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 1-8 8H6l-4 3 1-7a8 8 0 1 1 17-4Z"/><path d="M8 10h8M8 14h5"/></svg>
-
-<p><strong>Uma ajuda para escolher</strong><span>Conte com o atendimento da Videira.</span></p></a>
-</section>
-
-</div><div class="shopify-section"><section class="nv-types nv-container" aria-labelledby="nv-types-title-videira-categories">
-  <div class="nv-section-heading"><div><p class="nv-eyebrow">CADA ESTILO, UMA DESCOBERTA</p><h2 id="nv-types-title-videira-categories">Qual é o seu vinho?</h2></div><a class="nv-text-link" href="/collections/all">Ver todos 
+  <div class="nv-campaign-inner nv-container">
+    <div class="nv-campaign-copy"><p class="nv-campaign-label">NOVEMBRO NA VIDEIRA</p><h1>BLACK<span>FRIDAY</span></h1><p class="nv-campaign-date">27 A 30 DE NOVEMBRO</p><p class="nv-campaign-description">Prepare sua seleção. Descontos em vinhos e caixas, com condições divulgadas em breve.</p><a class="nv-button" href="/collections/all">Ver os vinhos 
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
 </a></div>
-  <nav class="nv-type-grid" aria-label="Escolha pelo tipo de vinho">
-    
-      
-      <a class="nv-type" href="/collections/types?q=Tinto">
-        <span class="nv-type-art" aria-hidden="true">
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</span>
-        <span>Tinto</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+    <div class="nv-campaign-products" aria-hidden="true"><div class="nv-campaign-bottle nv-campaign-bottle--1"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" alt="" loading="eager" widths="300,500,800" sizes="(max-width: 760px) 28vw, 18vw"></div><div class="nv-campaign-bottle nv-campaign-bottle--2"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/CELEBRATION-MOSCATEL-ECOMMERCE.webp?v=1793382087" width="600" height="800" alt="" loading="eager" widths="300,500,800" sizes="(max-width: 760px) 28vw, 18vw"></div><div class="nv-campaign-bottle nv-campaign-bottle--3"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989" width="600" height="800" alt="" loading="eager" widths="300,500,800" sizes="(max-width: 760px) 28vw, 18vw"></div><span class="nv-campaign-seal">VINHOS<br><strong>VIDEIRA</strong><br>VINHOTECA</span></div>
+  </div>
 
-
-      </a>
-    
-      
-      <a class="nv-type" href="/collections/types?q=Branco">
-        <span class="nv-type-art nv-type-art--white" aria-hidden="true">
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</span>
-        <span>Branco</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-
-      </a>
-    
-      
-      <a class="nv-type" href="/collections/types?q=Ros%C3%A9">
-        <span class="nv-type-art nv-type-art--rose" aria-hidden="true">
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</span>
-        <span>Rosé</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-
-      </a>
-    
-      
-      <a class="nv-type" href="/collections/types?q=Espumante">
-        <span class="nv-type-art nv-type-art--sparkling" aria-hidden="true">
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</span>
-        <span>Espumante</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-
-      </a>
-    
-    <a class="nv-type nv-type-all" href="/collections/all"><span class="nv-type-art" aria-hidden="true">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l1 7a6 6 0 0 1-12 0l1-7ZM12 16v6m-4 0h8M6 9h12"/></svg>
-
-</span><span>Todos os vinhos</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-</a>
-  </nav>
 </section>
 
 </div><div class="shopify-section">
@@ -196,79 +104,108 @@
 <section id="selecao" class="nv-featured nv-container">
   
 
-<section class="wc-section"><div class="wc-heading"><div><p class="ve-kicker">SEU PRÓXIMO BOM VINHO</p><h2>Escolhas da Videira</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
+<section class="wc-section"><div class="wc-heading"><div><h2>Destaques da Videira</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Escolhas da Videira"><div class="wc-track"><div class="wc-group">
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Origem Cabernet Sauvignon">
+</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Destaques da Videira"><div class="wc-track"><div class="wc-group">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/ponto-nero-celebration-moscatel-rose" aria-label="Ponto Nero Celebration Moscatel Rose">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Cabernet Sauvignon"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Origem Cabernet Sauvignon</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<a class="sf-add" href="/products/origem">Escolher opções</a>
-</div></article>
-
-
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Malbec Reserva">
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Malbec Reserva"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Malbec Reserva</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="21"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Ponto Nero Celebration Moscatel Rose"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/ponto-nero-celebration-moscatel-rose"><h3>Ponto Nero Celebration Moscatel Rose</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1000"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Chardonnay">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/ponto-nero-celebration-moscatel" aria-label="Ponto Nero Celebration Moscatel">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Chardonnay"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Chardonnay</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="22"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/CELEBRATION-MOSCATEL-ECOMMERCE.webp?v=1793382087" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Ponto Nero Celebration Moscatel"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/ponto-nero-celebration-moscatel"><h3>Ponto Nero Celebration Moscatel</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1001"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Rosé">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/escorihuela-familia-gascon-syrah" aria-label="Escorihuela Familia Gascón Syrah">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Rosé"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Rosé</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="23"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Escorihuela Familia Gascón Syrah"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/escorihuela-familia-gascon-syrah"><h3>Escorihuela Familia Gascón Syrah</h3></a><p>Gascón</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 107,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1002"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Merlot">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/crios-malbec" aria-label="Crios Malbec">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Merlot"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Merlot</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="24"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/susana-balbo-crios-malbec-vivavinho.webp?v=1793190156" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Crios Malbec"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/crios-malbec"><h3>Crios Malbec</h3></a><p>Susana Balbo</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 109,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1003"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Espumante Brut">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-sauvignon-blanc" aria-label="Becas Reserva Sauvignon Blanc">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Espumante Brut"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Espumante Brut</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="25"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_2_6d85da46-0361-4cee-a814-47db7666345e.jpg?v=1793139244" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Sauvignon Blanc"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-sauvignon-blanc"><h3>Becas Reserva Sauvignon Blanc</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1004"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-malbec" aria-label="Becas Reserva Malbec">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Malbec---1.webp?v=1793139093" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Malbec"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-malbec"><h3>Becas Reserva Malbec</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1005"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-chardonnay" aria-label="Becas Reserva Chardonnay">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_1_e7ef5de3-e150-47b2-b12a-3c73103c40b0.jpg?v=1793138992" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Chardonnay"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-chardonnay"><h3>Becas Reserva Chardonnay</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1006"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-cabernet-sauvignon" aria-label="Becas Reserva Cabernet Sauvignon">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Cabernet-Sauvignon---2021.png?v=1793138858" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Cabernet Sauvignon"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-cabernet-sauvignon"><h3>Becas Reserva Cabernet Sauvignon</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1007"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
@@ -281,106 +218,204 @@ Adicionar ao carrinho</button></form>
 </section>
 
 
+</div><div class="shopify-section"><section class="nv-categories nv-container" aria-labelledby="nv-categories-videira-categories"><div class="nv-section-heading"><h2 id="nv-categories-videira-categories">Compre por categoria</h2><a href="/collections/all">Ver todos 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</a></div><div class="nv-category-grid">
+
+  
+  
+  
+  <a class="nv-category nv-category--tinto" href="/search?type=product&amp;q=title%3ATinto+OR+title%3AMalbec+OR+title%3ACabernet+OR+title%3AMerlot+OR+title%3ACarm%C3%A9n%C3%A8re+OR+title%3ASyrah+OR+title%3A%22Pinot+Noir%22" ><span class="nv-category-photo"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989" width="600" height="800" loading="lazy" widths="160,300,500" sizes="(max-width: 760px) 26vw, 180px" alt="Tintos"></span><strong>Tintos</strong><span class="nv-category-cta">Ver vinhos 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</span></a>
+
+  
+  
+  
+  <a class="nv-category nv-category--branco" href="/search?type=product&amp;q=title%3ABranco+OR+title%3AChardonnay+OR+title%3A%22Sauvignon+Blanc%22+OR+title%3ATorront%C3%A9s+OR+title%3A%22Pinot+Grigio%22" ><span class="nv-category-photo"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_2_6d85da46-0361-4cee-a814-47db7666345e.jpg?v=1793139244" width="600" height="800" loading="lazy" widths="160,300,500" sizes="(max-width: 760px) 26vw, 180px" alt="Brancos"></span><strong>Brancos</strong><span class="nv-category-cta">Ver vinhos 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</span></a>
+
+  
+  
+  
+  <a class="nv-category nv-category--rose" href="/search?type=product&amp;q=title%3ARos%C3%A9+OR+title%3ARose+OR+title%3ARosado" ><span class="nv-category-photo"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" loading="lazy" widths="160,300,500" sizes="(max-width: 760px) 26vw, 180px" alt="Rosés"></span><strong>Rosés</strong><span class="nv-category-cta">Ver vinhos 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</span></a>
+
+  
+  
+  
+  <a class="nv-category nv-category--espumante" href="/search?type=product&amp;q=title%3AEspumante+OR+title%3ABrut+OR+title%3AMoscatel+OR+title%3ACelebration" ><span class="nv-category-photo"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" loading="lazy" widths="160,300,500" sizes="(max-width: 760px) 26vw, 180px" alt="Espumantes"></span><strong>Espumantes</strong><span class="nv-category-cta">Ver vinhos 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</span></a>
+
+</div></section>
+
+</div><div class="shopify-section"><section class="nv-commercial-panels nv-container"><a class="nv-commercial-panel nv-commercial-panel--boxes" href="https://wa.me/5545999056277"><div><span>MAIS GARRAFAS, MAIS POSSIBILIDADES</span><h2>Vai levar<br>uma caixa?</h2><p>Converse com a Videira e consulte as condições para sua seleção.</p><strong>Consultar condições 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</strong></div><div class="nv-panel-photos" aria-hidden="true"><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" loading="lazy" alt=""><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/CELEBRATION-MOSCATEL-ECOMMERCE.webp?v=1793382087" width="600" height="800" loading="lazy" alt=""><img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989" width="600" height="800" loading="lazy" alt=""></div></a><a class="nv-commercial-panel nv-commercial-panel--new" href="/collections/all?sort_by=created-descending"><div><span>CHEGOU NA VIDEIRA</span><h2>Seu próximo<br>vinho está aqui.</h2><p>Confira os últimos rótulos do nosso catálogo.</p><strong>Ver novidades 
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</strong></div></a></section>
+
 </div><div class="shopify-section">
-<section class="nv-pairings nv-container" aria-labelledby="nv-pairings-videira-pairings">
-  <div class="nv-section-heading"><div><p class="nv-eyebrow">O VINHO ACOMPANHA O MOMENTO</p><h2 id="nv-pairings-videira-pairings">Uma escolha para cada ocasião.</h2></div></div>
-  <div class="nv-pairing-grid"><a class="nv-pairing nv-pairing--wine" href="/collections/all" ><span class="nv-eyebrow">PARA COMPARTILHAR</span><h3>Um jantar especial.</h3><p>Boas conversas merecem uma boa escolha.</p><span class="nv-pairing-link">Explorar seleção 
+<section class="nv-prices nv-container"><div class="nv-section-heading"><h2>Encontre seu preço ideal</h2><span>Escolha quanto quer investir</span></div><div class="nv-price-grid"><a href="/collections/all?filter.v.price.lte=99.99"><small>VINHOS ATÉ</small><strong>R$ 100</strong>
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</span>
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</a><a class="nv-pairing nv-pairing--olive" href="/collections/all" ><span class="nv-eyebrow">PARA DESCOBRIR</span><h3>Novos favoritos.</h3><p>Explore outras uvas, origens e histórias.</p><span class="nv-pairing-link">Explorar seleção 
+</a><a href="/collections/all?filter.v.price.gte=100&amp;filter.v.price.lte=149.99"><small>DE R$ 100 ATÉ</small><strong>R$ 150</strong>
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</span>
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</a><a class="nv-pairing nv-pairing--sand" href="/collections/all" ><span class="nv-eyebrow">PARA CELEBRAR</span><h3>Um bom encontro.</h3><p>Encontre o rótulo para o próximo brinde.</p><span class="nv-pairing-link">Explorar seleção 
+</a><a href="/collections/all?filter.v.price.gte=150&amp;filter.v.price.lte=249.99"><small>DE R$ 150 ATÉ</small><strong>R$ 250</strong>
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</span>
-<svg class="nv-bottle-art" viewBox="0 0 80 120" fill="none" aria-hidden="true"><path d="M33 10h14v24c0 9 12 15 12 24v47a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5V58c0-9 12-15 12-24V10Z" fill="currentColor"/><path d="M32 7h16v17H32z" fill="#b99a60"/><path d="M22 65h36v29H22z" fill="#faf4e9"/><path d="M39 70h2v18h-2zM34 75h12v1H34z" fill="#651242"/><path d="M29 40c-3 6-5 8-5 15v6" stroke="white" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/></svg>
-</a></div>
-</section>
+</a><a href="/collections/all?filter.v.price.gte=250"><small>VINHOS A PARTIR DE</small><strong>R$ 250</strong>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+
+</a></div></section>
+
+</div><div class="shopify-section">
 
 
 </div><div class="shopify-section">
 
-<section class="wc-section"><div class="wc-heading"><div><p class="ve-kicker">OS ÚLTIMOS RÓTULOS ADICIONADOS</p><h2>Novidades</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
+<section class="wc-section"><div class="wc-heading"><div><h2>Novidades na adega</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Novidades"><div class="wc-track"><div class="wc-group">
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Espumante Brut">
+</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Novidades na adega"><div class="wc-track"><div class="wc-group">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-cabernet-sauvignon" aria-label="Origem Cabernet Sauvignon">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Espumante Brut"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Espumante Brut</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="25"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/download.webp?v=1792702771" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Cabernet Sauvignon"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-cabernet-sauvignon"><h3>Origem Cabernet Sauvignon</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1037"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Merlot">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/puna-malbec" aria-label="Puna Malbec">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Merlot"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Merlot</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="24"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Design-sem-nome-2-10_png.webp?v=1792762266" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Puna Malbec"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/puna-malbec"><h3>Puna Malbec</h3></a><p>Puna</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 69,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1036"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Rosé">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-carmenere" aria-label="Origem Carménére">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Rosé"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Rosé</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="23"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Carmenere-ecommerce_fead8160-f002-44b5-9be7-ecd382b57bfd.webp?v=1792868735" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Carménére"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-carmenere"><h3>Origem Carménére</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1035"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Chardonnay">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-chardonnay" aria-label="Origem Chardonnay">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Chardonnay"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Chardonnay</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="22"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-chardonnay--rotulo-novo--ecommerce.webp?v=1792871684" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Chardonnay"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-chardonnay"><h3>Origem Chardonnay</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1034"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Malbec Reserva">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-merlot" aria-label="Origem Merlot">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Malbec Reserva"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Malbec Reserva</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="21"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_1.jpg?v=1792872337" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Merlot"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-merlot"><h3>Origem Merlot</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1033"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Origem Cabernet Sauvignon">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-elegance-cabernet-sauvignon" aria-label="Origem Elegance Cabernet Sauvignon">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Cabernet Sauvignon"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Origem Cabernet Sauvignon</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<a class="sf-add" href="/products/origem">Escolher opções</a>
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Cabernet-Sauvignon-Elegance-ecommerce.webp?v=1792872497" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Elegance Cabernet Sauvignon"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-elegance-cabernet-sauvignon"><h3>Origem Elegance Cabernet Sauvignon</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1032"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem-sauvignon-blanc" aria-label="Origem Sauvignon Blanc">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Sauvignon-Blanc-ecommerce.webp?v=1792872643" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Sauvignon Blanc"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/origem-sauvignon-blanc"><h3>Origem Sauvignon Blanc</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 65,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1031"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/ponto-nero-celebration-brut" aria-label="Ponto Nero Celebration Brut">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/163411-600-800.webp?v=1792873049" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Ponto Nero Celebration Brut"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/ponto-nero-celebration-brut"><h3>Ponto Nero Celebration Brut</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 60,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1030"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/terroir-merlot" aria-label="Terroir Merlot">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/TerroirMerlot_Ecomm_1200x1600_deca10ce-4427-4066-9fae-608efaad1420.png?v=1792873370" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Terroir Merlot"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/terroir-merlot"><h3>Terroir Merlot</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 99,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1029"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/terroir-cabernet-sauvignon" aria-label="Terroir Cabernet Sauvignon">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Terroir-Cabernet-Sauvignon_Ecomm_1200x1600_df2a251c-8c74-45f7-9671-deb3e582b2e8.png?v=1792873663" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Terroir Cabernet Sauvignon"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/terroir-cabernet-sauvignon"><h3>Terroir Cabernet Sauvignon</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 99,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1028"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
 </div></article>
 
 </div></div></div></section>
@@ -392,90 +427,137 @@ Adicionar ao carrinho</button></form>
 </div><div class="shopify-section">
 
 
-<section id="paises" class="nv-origins"><div class="nv-origin-layout nv-container"><div class="nv-origin-intro"><p class="nv-eyebrow">CADA ORIGEM, UMA HISTÓRIA</p><h2>Um mundo para descobrir em cada taça.</h2><p>Encontre seu vinho pelo lugar de onde ele vem.</p><a class="nv-text-link" href="/collections/all">Explore o catálogo 
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-</a></div><div class="nv-origin-grid"><a href="/search?type=product&amp;q=Brasil"><strong>Brasil</strong><span>Explore os rótulos</span>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
-
-</a></div></div></section>
-
 
 </div><div class="shopify-section">
 
-<section class="wc-section"><div class="wc-heading"><div><p class="ve-kicker">EXPLORE A NOSSA ADEGA</p><h2>Mais rótulos para descobrir</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
+<section class="wc-section"><div class="wc-heading"><div><h2>Explore nossos vinhos</h2></div><div class="wc-controls"><a href="/collections/all">Ver todos
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Mais rótulos para descobrir"><div class="wc-track"><div class="wc-group">
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Origem Cabernet Sauvignon">
+</a><button type="button" hidden data-carousel-step="-1" aria-label="Ver vinhos anteriores">‹</button><button type="button" hidden data-carousel-step="1" aria-label="Ver próximos vinhos">›</button></div></div><div class="wc-viewport" tabindex="0" aria-label="Explore nossos vinhos"><div class="wc-track"><div class="wc-group">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/ponto-nero-celebration-moscatel-rose" aria-label="Ponto Nero Celebration Moscatel Rose">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Origem Cabernet Sauvignon"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Origem Cabernet Sauvignon</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<a class="sf-add" href="/products/origem">Escolher opções</a>
-</div></article>
-
-
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Malbec Reserva">
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Malbec Reserva"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Malbec Reserva</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="21"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Ponto Nero Celebration Moscatel Rose"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/ponto-nero-celebration-moscatel-rose"><h3>Ponto Nero Celebration Moscatel Rose</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1000"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Chardonnay">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/ponto-nero-celebration-moscatel" aria-label="Ponto Nero Celebration Moscatel">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Chardonnay"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Chardonnay</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="22"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/CELEBRATION-MOSCATEL-ECOMMERCE.webp?v=1793382087" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Ponto Nero Celebration Moscatel"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/ponto-nero-celebration-moscatel"><h3>Ponto Nero Celebration Moscatel</h3></a><p>Ponto Nero</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1001"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Rosé">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/escorihuela-familia-gascon-syrah" aria-label="Escorihuela Familia Gascón Syrah">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Rosé"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Rosé</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="23"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Escorihuela Familia Gascón Syrah"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/escorihuela-familia-gascon-syrah"><h3>Escorihuela Familia Gascón Syrah</h3></a><p>Gascón</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 107,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1002"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Merlot">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/crios-malbec" aria-label="Crios Malbec">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Merlot"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Merlot</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="24"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/susana-balbo-crios-malbec-vivavinho.webp?v=1793190156" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Crios Malbec"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/crios-malbec"><h3>Crios Malbec</h3></a><p>Susana Balbo</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 109,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1003"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
 </div></article>
 
 
-<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/origem" aria-label="Espumante Brut">
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-sauvignon-blanc" aria-label="Becas Reserva Sauvignon Blanc">
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNjAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZhZjhmMyIvPjxwYXRoIGQ9Ik0xNzYgNDBoNDh2MTMwcTAgMjUgMzIgNTV2MzE1cTAgMjAtMjAgMjBoLTcycS0yMCAwLTIwLTIwVjIyNXEzMi0zMCAzMi01NXoiIGZpbGw9IiMyOTI1MmEiLz48cGF0aCBkPSJNMTc2IDQwaDQ4djkwaC00OCIgZmlsbD0iI2I3OWE2MCIvPjxyZWN0IHg9IjE0NCIgeT0iMjkwIiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2YyZThkNyIvPjx0ZXh0IHg9IjIwMCIgeT0iMzUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjUxMjQyIiBmb250LXNpemU9IjE2Ij5WSURFSVJBPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjg1MzViIiBmb250LXNpemU9IjEwIj5JTFVTVFJBw4fDg088L3RleHQ+PC9zdmc+" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Espumante Brut"></a>
-<div class="sf-wine-info"><div class="sf-wine-origin">Serra Gaúcha · Brasil</div>
-<a href="/products/origem"><h3>Espumante Brut</h3></a><p>Casa Valduga</p><span class="sf-wine-grape">Cabernet Sauvignon</span>
-<div class="sf-wine-price"><small>Preço</small><del>R$ 80,00</del><strong>R$ 65,00</strong></div>
-<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="25"><button class="sf-add" type="submit">
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_2_6d85da46-0361-4cee-a814-47db7666345e.jpg?v=1793139244" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Sauvignon Blanc"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-sauvignon-blanc"><h3>Becas Reserva Sauvignon Blanc</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1004"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-malbec" aria-label="Becas Reserva Malbec">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Malbec---1.webp?v=1793139093" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Malbec"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-malbec"><h3>Becas Reserva Malbec</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1005"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-chardonnay" aria-label="Becas Reserva Chardonnay">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_1_e7ef5de3-e150-47b2-b12a-3c73103c40b0.jpg?v=1793138992" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Chardonnay"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-chardonnay"><h3>Becas Reserva Chardonnay</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1006"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-cabernet-sauvignon" aria-label="Becas Reserva Cabernet Sauvignon">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Cabernet-Sauvignon---2021.png?v=1793138858" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Cabernet Sauvignon"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-cabernet-sauvignon"><h3>Becas Reserva Cabernet Sauvignon</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1007"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/becas-reserva-carmenere" aria-label="Becas Reserva Carménère">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Carmenere---2021.png?v=1793138687" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Becas Reserva Carménère"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/becas-reserva-carmenere"><h3>Becas Reserva Carménère</h3></a><p>Becas</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 49,00</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1008"><button class="sf-add" type="submit">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+
+Adicionar ao carrinho</button></form>
+</div></article>
+
+
+<article class="sf-wine-card"><a class="sf-wine-visual" href="/products/espumante-arte-brut-375ml" aria-label="Espumante Arte Brut 375ml">
+
+<img src="https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Arte-Brut-375ml-ecommerce.webp?v=1793138437" width="600" height="800" class="wine-photo" loading="lazy" widths="180,360,540,720" sizes="(max-width: 760px) 45vw, 245px" alt="Espumante Arte Brut 375ml"></a>
+<div class="sf-wine-info"><div class="sf-wine-origin"></div>
+<a href="/products/espumante-arte-brut-375ml"><h3>Espumante Arte Brut 375ml</h3></a><p>Casa Valduga</p><span class="sf-wine-grape"></span>
+<div class="sf-wine-price"><small>Preço</small><strong>R$ 59,90</strong></div>
+<form method="post" action="/cart/add" data-shopify-add ><input type="hidden" name="id" value="1009"><button class="sf-add" type="submit">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
 
 Adicionar ao carrinho</button></form>
@@ -493,8 +575,8 @@ Adicionar ao carrinho</button></form>
 
 
 <section class="nv-discovery nv-container">
-<div id="uvas"><p class="nv-eyebrow">ENCONTRE O SEU ESTILO</p><h2>Uma uva. Muitas possibilidades.</h2><div class="nv-grapes"><a href="/search?type=product&amp;q=Cabernet+Sauvignon">Cabernet Sauvignon</a></div></div>
-<div id="bodegas"><p class="nv-eyebrow">QUEM ESTÁ POR TRÁS DO VINHO</p><h2>Conheça as bodegas.</h2><div class="nv-vendors"><a href="/collections/vendors?q=Casa%20Valduga">Casa Valduga
+
+<div id="bodegas"><p class="nv-eyebrow">QUEM ESTÁ POR TRÁS DO VINHO</p><h2>Nossas bodegas</h2><div class="nv-vendors"><a href="/collections/vendors?q=Casa%20Valduga">Casa Valduga
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
 </a><a href="/collections/vendors?q=Bodega%20Videira">Bodega Videira
@@ -504,11 +586,11 @@ Adicionar ao carrinho</button></form>
 </section>
 
 
-</div><div class="shopify-section"><section id="sobre" class="nv-about"><div class="nv-about-inner nv-container"><div><p class="nv-eyebrow">PRAZER, SOMOS A VIDEIRA</p><h2>A melhor parte do vinho é com quem você compartilha.</h2></div><div><p>De Foz do Iguaçu para a sua mesa. Vinhos com identidade e um atendimento próximo para ajudar você a encontrar o seu próximo favorito.</p><p>Explore o catálogo no seu tempo. Conheça as origens, descubra novas uvas e escolha os rótulos que combinam com você.</p><a class="nv-text-link" href="/collections/all">Encontre o seu vinho 
+</div><div class="shopify-section"><section id="sobre" class="nv-store-info nv-container"><h2>Videira Vinhoteca</h2><p>Vinhos nacionais e importados em Foz do Iguaçu. Conheça os rótulos, escolha suas garrafas e conte com a Videira para ajudar na compra.</p><a href="/collections/all">Conheça nosso catálogo 
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
 
-</a></div></div></section>
-<section id="faq" class="nv-faq nv-container"><div><p class="nv-eyebrow">DO CATÁLOGO À SUA MESA</p><h2>Podemos ajudar?</h2></div><div><details><summary>Como fazer um pedido?</summary><p>Adicione os vinhos ao carrinho, confira as quantidades e selecione Finalizar compra. No checkout, informe seus dados e escolha entre as opções de entrega e pagamento disponíveis.</p></details><details><summary>Como funciona a entrega?</summary><p>Informe seu CEP no checkout para consultar as opções de entrega, os prazos e o frete disponíveis para seu endereço.</p></details><details><summary>Preciso criar uma conta?</summary><p>Você pode explorar o catálogo sem cadastro. Ao finalizar a compra, siga as opções de identificação apresentadas no checkout.</p></details></div></section>
+</a></section>
+<section id="faq" class="nv-faq nv-container"><h2>Dúvidas frequentes</h2><div><details><summary>Como fazer um pedido?</summary><p>Adicione os vinhos ao carrinho, confira as quantidades e selecione Finalizar compra. No checkout, informe seus dados e escolha entre as opções de entrega e pagamento disponíveis.</p></details><details><summary>Como funciona a entrega?</summary><p>Informe seu CEP no checkout para consultar as opções de entrega, os prazos e o frete disponíveis para seu endereço.</p></details><details><summary>Preciso criar uma conta?</summary><p>Você pode explorar o catálogo sem cadastro. Ao finalizar a compra, siga as opções de identificação apresentadas no checkout.</p></details></div></section>
 
 </div></main>
 <footer class="nv-footer">
@@ -530,6 +612,7 @@ Adicionar ao carrinho</button></form>
 
 </a><p>Consulte as opções de entrega, os prazos e o pagamento no checkout.</p></div>
   </div>
+  
   <div class="nv-footer-bottom nv-container"><span>© 2026 Videira Vinhoteca</span><span>Venda proibida para menores de 18 anos. Beba com moderação.</span></div>
 </footer>
 

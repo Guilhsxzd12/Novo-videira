@@ -3,43 +3,88 @@
     "hero": {
       "type": "videira-hero",
       "settings": {
-        "eyebrow": "A SUA PRÓXIMA DESCOBERTA",
-        "title": "O próximo brinde",
-        "accent": "começa aqui.",
-        "intro": "Encontre vinhos com origem, personalidade e lugar à sua mesa. Explore os rótulos e descubra o seu próximo favorito."
+        "eyebrow": "NOVEMBRO NA VIDEIRA",
+        "title": "BLACK",
+        "accent": "FRIDAY",
+        "dates": "27 A 30 DE NOVEMBRO",
+        "intro": "Prepare sua seleção. Descontos em vinhos e caixas, com condições divulgadas em breve."
       }
-    },
-    "types": {
-      "type": "videira-categories",
-      "settings": {}
     },
     "featured": {
       "type": "videira-featured",
       "settings": {
-        "limit": 6,
-        "title": "Escolhas da Videira",
-        "eyebrow": "SEU PRÓXIMO BOM VINHO"
+        "limit": 8,
+        "title": "Destaques da Videira",
+        "eyebrow": ""
       }
     },
-    "discover_wines": {
+    "types": {
+      "type": "videira-categories",
+      "settings": {},
+      "blocks": {
+        "tinto": {
+          "type": "category",
+          "settings": {
+            "title": "Tintos",
+            "category": "tinto"
+          }
+        },
+        "branco": {
+          "type": "category",
+          "settings": {
+            "title": "Brancos",
+            "category": "branco"
+          }
+        },
+        "rose": {
+          "type": "category",
+          "settings": {
+            "title": "Rosés",
+            "category": "rose"
+          }
+        },
+        "espumante": {
+          "type": "category",
+          "settings": {
+            "title": "Espumantes",
+            "category": "espumante"
+          }
+        }
+      },
+      "block_order": [
+        "tinto",
+        "branco",
+        "rose",
+        "espumante"
+      ]
+    },
+    "occasions": {
+      "type": "videira-pairings",
+      "settings": {}
+    },
+    "prices": {
+      "type": "videira-price-ranges",
+      "settings": {}
+    },
+    "new": {
       "type": "videira-carousel",
       "settings": {
-        "title": "Mais rótulos para descobrir",
-        "eyebrow": "EXPLORE A NOSSA ADEGA",
-        "limit": 12
+        "title": "Novidades na adega",
+        "eyebrow": "",
+        "limit": 10,
+        "newest": true
       }
     },
     "origins": {
       "type": "videira-origins",
       "settings": {}
     },
-    "new": {
+    "discover_wines": {
       "type": "videira-carousel",
       "settings": {
-        "title": "Novidades",
-        "eyebrow": "OS ÚLTIMOS RÓTULOS ADICIONADOS",
-        "limit": 12,
-        "newest": true
+        "title": "Explore nossos vinhos",
+        "eyebrow": "",
+        "limit": 10
       }
     },
     "discover": {
@@ -50,52 +95,18 @@
       "type": "videira-editorial",
       "settings": {}
     },
-    "benefits": {
-      "type": "videira-benefits",
+    "offers": {
+      "type": "videira-offers",
       "settings": {}
-    },
-    "occasions": {
-      "type": "videira-pairings",
-      "settings": {},
-      "blocks": {
-        "jantar": {
-          "type": "occasion",
-          "settings": {
-            "eyebrow": "PARA COMPARTILHAR",
-            "title": "Um jantar especial.",
-            "text": "Boas conversas merecem uma boa escolha."
-          }
-        },
-        "descoberta": {
-          "type": "occasion",
-          "settings": {
-            "eyebrow": "PARA DESCOBRIR",
-            "title": "Novos favoritos.",
-            "text": "Explore outras uvas, origens e histórias."
-          }
-        },
-        "brinde": {
-          "type": "occasion",
-          "settings": {
-            "eyebrow": "PARA CELEBRAR",
-            "title": "Um bom encontro.",
-            "text": "Encontre o rótulo para o próximo brinde."
-          }
-        }
-      },
-      "block_order": [
-        "jantar",
-        "descoberta",
-        "brinde"
-      ]
     }
   },
   "order": [
     "hero",
-    "benefits",
-    "types",
     "featured",
+    "types",
     "occasions",
+    "prices",
+    "offers",
     "new",
     "origins",
     "discover_wines",

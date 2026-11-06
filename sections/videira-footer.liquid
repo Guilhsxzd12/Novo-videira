@@ -5,6 +5,7 @@
     <div><h3>Informações</h3>{% for policy in shop.policies %}{% if policy.body != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}{% for link in section.settings.footer_menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}<a href="{{ routes.root_url }}#faq">Dúvidas frequentes</a>{% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">Minha conta</a>{% endif %}</div>
     <div><h3>Vamos conversar?</h3><p>Uma ajuda para escolher seu próximo vinho.</p>{% if settings.whatsapp != blank %}<a href="https://wa.me/{{ settings.whatsapp | remove: '+' | remove: ' ' | escape }}" target="_blank" rel="noopener">Fale com a Videira {% render 'icon', name: 'arrow' %}</a>{% endif %}<p>Consulte as opções de entrega, os prazos e o pagamento no checkout.</p></div>
   </div>
+  {% if shop.enabled_payment_types.size > 0 %}<div class="nv-payment-types nv-container"><span>Formas de pagamento</span><div>{% for payment_type in shop.enabled_payment_types %}{{ payment_type | payment_type_svg_tag }}{% endfor %}</div></div>{% endif %}
   <div class="nv-footer-bottom nv-container"><span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</span><span>Venda proibida para menores de 18 anos. Beba com moderação.</span></div>
 </footer>
 {% schema %}

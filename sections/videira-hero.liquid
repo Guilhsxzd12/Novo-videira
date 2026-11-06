@@ -1,16 +1,14 @@
-<section class="nv-hero nv-container">
-  <div class="nv-hero-copy">
-    <p class="nv-eyebrow">{{ section.settings.eyebrow | escape }}</p>
-    <h1>{{ section.settings.title | escape }} <em>{{ section.settings.accent | escape }}</em></h1>
-    <p class="nv-hero-intro">{{ section.settings.intro | escape }}</p>
-    <div class="nv-hero-actions"><a class="nv-button" href="{{ section.settings.link | default: routes.all_products_collection_url }}">Explore os vinhos {% render 'icon', name: 'arrow' %}</a><a class="nv-text-link" href="{{ routes.root_url }}#sobre">Conheça a Videira</a></div>
-    <div class="nv-hero-signature"><span aria-hidden="true">✦</span> Para quem gosta de escolher bem.</div>
+{% assign campaign_url = section.settings.link | default: routes.all_products_collection_url %}
+<section class="nv-campaign" aria-label="Campanha Videira">
+{% if section.settings.desktop_image %}
+  <h1 class="nv-sr-only">{{ section.settings.title | escape }} {{ section.settings.accent | escape }}</h1><a class="nv-campaign-art" href="{{ campaign_url }}"><picture>{% if section.settings.mobile_image %}<source media="(max-width: 760px)" srcset="{{ section.settings.mobile_image | image_url: width: 900 }}">{% endif %}{{ section.settings.desktop_image | image_url: width: 2200 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', alt: section.settings.title }}</picture></a>
+{% else %}
+  <div class="nv-campaign-inner nv-container">
+    <div class="nv-campaign-copy"><p class="nv-campaign-label">{{ section.settings.eyebrow | escape }}</p><h1>{{ section.settings.title | escape }}<span>{{ section.settings.accent | escape }}</span></h1><p class="nv-campaign-date">{{ section.settings.dates | escape }}</p><p class="nv-campaign-description">{{ section.settings.intro | escape }}</p><a class="nv-button" href="{{ campaign_url }}">Ver os vinhos {% render 'icon', name: 'arrow' %}</a></div>
+    <div class="nv-campaign-products" aria-hidden="true">{% for product in collections.all.products limit: 3 %}{% if product.featured_image %}<div class="nv-campaign-bottle nv-campaign-bottle--{{ forloop.index }}">{{ product.featured_image | image_url: width: 800 | image_tag: alt: '', loading: 'eager', widths: '300,500,800', sizes: '(max-width: 760px) 28vw, 18vw' }}</div>{% endif %}{% endfor %}<span class="nv-campaign-seal">VINHOS<br><strong>VIDEIRA</strong><br>VINHOTECA</span></div>
   </div>
-  <div class="nv-hero-image">
-    {% if section.settings.image %}{{ section.settings.image | image_url: width: 1800 | image_tag: fetchpriority: 'high', loading: 'eager', widths: '480,800,1200,1800', sizes: '(max-width: 760px) 100vw, 55vw', alt: section.settings.image.alt }}{% else %}<img src="{{ 'videira-hero.jpg' | asset_url }}" alt="Taças de vinho reunidas em um brinde à mesa" width="1600" height="1067" fetchpriority="high">{% endif %}
-    <div class="nv-photo-note"><span>BOAS ESCOLHAS. BONS ENCONTROS.</span><p>O vinho é só o começo.</p></div>
-  </div>
+{% endif %}
 </section>
 {% schema %}
-{"name":"Videira · Banner","settings":[{"type":"text","id":"eyebrow","label":"Chamada","default":"A SUA PRÓXIMA DESCOBERTA"},{"type":"text","id":"title","label":"Título","default":"O próximo brinde"},{"type":"text","id":"accent","label":"Destaque","default":"começa aqui."},{"type":"textarea","id":"intro","label":"Descrição","default":"Encontre vinhos com origem, personalidade e lugar à sua mesa. Explore os rótulos e descubra o seu próximo favorito."},{"type":"image_picker","id":"image","label":"Fotografia"},{"type":"url","id":"link","label":"Destino do botão"}],"presets":[{"name":"Videira · Banner"}]}
+{"name":"Videira · Campanha","settings":[{"type":"text","id":"eyebrow","label":"Chamada","default":"NOVEMBRO NA VIDEIRA"},{"type":"text","id":"title","label":"Título","default":"BLACK"},{"type":"text","id":"accent","label":"Segunda linha","default":"FRIDAY"},{"type":"text","id":"dates","label":"Datas","default":"27 A 30 DE NOVEMBRO"},{"type":"textarea","id":"intro","label":"Descrição","default":"Prepare sua seleção. Descontos em vinhos e caixas, com condições divulgadas em breve."},{"type":"image_picker","id":"desktop_image","label":"Arte para computador"},{"type":"image_picker","id":"mobile_image","label":"Arte para celular"},{"type":"url","id":"link","label":"Destino do banner"}],"presets":[{"name":"Videira · Campanha"}]}
 {% endschema %}

@@ -4,8 +4,8 @@
 {% assign vendor_links = vendor_links | strip %}
 {% if grape_links != blank or vendor_links != blank %}
 <section class="nv-discovery nv-container">
-{% if grape_links != blank %}<div id="uvas"><p class="nv-eyebrow">ENCONTRE O SEU ESTILO</p><h2>Uma uva. Muitas possibilidades.</h2><div class="nv-grapes">{{ grape_links }}</div></div>{% endif %}
-{% if vendor_links != blank %}<div id="bodegas"><p class="nv-eyebrow">QUEM ESTÁ POR TRÁS DO VINHO</p><h2>Conheça as bodegas.</h2><div class="nv-vendors">{{ vendor_links }}</div></div>{% endif %}
+{% if grape_links != blank %}<div id="uvas"><p class="nv-eyebrow">ENCONTRE O SEU ESTILO</p><h2>Escolha pela uva</h2><div class="nv-grapes">{{ grape_links }}</div></div>{% endif %}
+{% if vendor_links != blank %}<div id="bodegas"><p class="nv-eyebrow">QUEM ESTÁ POR TRÁS DO VINHO</p><h2>Nossas bodegas</h2><div class="nv-vendors">{{ vendor_links }}</div></div>{% endif %}
 </section>
 {% endif %}
 {% schema %}

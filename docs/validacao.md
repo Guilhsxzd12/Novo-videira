@@ -1,25 +1,22 @@
-# Validação desta versão
+# Validação · Videira 2.0
 
-## Realizado
+## Executado
 
-- Sintaxe JavaScript de `assets/videira.js` verificada com `node --check`.
-- 60 verificações locais de arquivos, schemas, templates, identificadores de configuração, snippets, assets, JSON e Instagram.
-- Renderização Liquid de oito páginas: início, catálogo, produto, carrinho, busca, erro 404, página de conteúdo e lista de coleções.
-- Os oito templates foram renderizados em quatro cenários: catálogo vazio, um produto sem metadados, seis produtos sem metadados e seis produtos com metadados. Total: 32 renderizações aprovadas.
-- Verificação de título principal, busca, menus, links de conta, faixa opcional, ausência de Liquid não resolvido, campos de variante e formulário nativo de compra.
-- Verificação de que o snippet de card mantém o conteúdo original e de que o CSS novo não redefine seu formato.
-- ZIP de importação criado somente com `assets`, `config`, `layout`, `locales`, `sections`, `snippets` e `templates`.
-
-A renderização usa dados ilustrativos locais. Neste ambiente, a dependência de teste LiquidJS foi obtida do bundle oficial do projeto via GitHub; ela não é incluída nem necessária no tema Shopify.
+- 66 verificações de schemas Shopify, configurações, referências, assets, JSON e Instagram.
+- Sintaxe JavaScript verificada com `node --check`.
+- Oito páginas renderizadas em quatro cenários: catálogo vazio; um produto sem metadados; seis produtos sem metadados; seis produtos com metadados.
+- Categorias mantidas mesmo com tipo de produto vazio; catálogo sem busca duplicada; campos de variante e formulário nativo de compra preservados.
+- Prévia adicional gerada com os 38 produtos do catálogo público da Videira e fotos próprias da loja. Esses dados são um retrato de referência, sem conexão ao vivo com estoque ou preços.
+- ZIP de importação com somente as pastas reconhecidas de tema Shopify, testado quanto à integridade.
 
 ## Limites
 
-O navegador de QA e a prévia integrada não estavam disponíveis neste ambiente. Não houve validação visual em navegador, teste de cliques em celular/computador ou inspeção da loja Shopify. A suíte de navegador herdada é mantida como ferramenta, mas não foi executada nesta entrega.
+Não havia navegador de QA integrado disponível. Não foi feita comparação visual pixel a pixel com a Cia do Vinho, nem validação em navegador ou checkout real. O acesso HTTP direto à referência retornou 403; a pesquisa usou páginas indexadas e imagens públicas da própria referência.
 
-O LiquidJS adapta tags específicas da Shopify apenas para testar renderização. O resultado não substitui a renderização, Theme Check oficial e validação de checkout nos servidores Shopify.
+O renderizador LiquidJS adapta tags da Shopify para verificações locais. Não substitui Theme Check oficial, prévia hospedada, testes de celular e um pedido de teste antes de publicar. A suíte de navegador herdada não foi executada nesta entrega.
 
-Antes de publicar, revisar o tema na prévia Shopify: imagem principal, cabeçalho com os menus reais, cards, catálogo, filtros habilitados, busca, menu mobile, variantes sem estoque, carrinho, frete, formas de pagamento e checkout. Condições comerciais e dados do catálogo real são configurados na loja.
+## Conferir na Shopify
 
-## Prévia ilustrativa
+Sincronização da branch `main`, campanha, categorias vinculadas a coleções, filtro de preços no Search & Discovery, menu mobile, duas colunas de cards, imagens, variantes sem estoque, carrinho, frete, pagamento e checkout. Nenhum desconto automático foi configurado pelo tema.
 
-`docs/preview.html` abre após baixar o repositório completo. Usa os mesmos templates e estilos, com garrafas ilustradas e preços fictícios claramente identificados. A busca e a compra nessa prévia exibem um aviso; no tema instalado, usam os fluxos reais da Shopify. O arquivo independente `Novo-Videira-previa.html` também é fornecido na entrega.
+A prévia HTML é uma demonstração do design. Os links de compra exibem um aviso; no tema instalado, usam os fluxos nativos reais da Shopify.

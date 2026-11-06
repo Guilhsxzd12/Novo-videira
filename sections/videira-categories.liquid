@@ -1,16 +1,11 @@
-<section class="nv-types nv-container" aria-labelledby="nv-types-title-{{ section.id }}">
-  <div class="nv-section-heading"><div><p class="nv-eyebrow">CADA ESTILO, UMA DESCOBERTA</p><h2 id="nv-types-title-{{ section.id }}">Qual é o seu vinho?</h2></div><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Ver todos {% render 'icon', name: 'arrow' %}</a></div>
-  <nav class="nv-type-grid" aria-label="Escolha pelo tipo de vinho">
-    {% for type in shop.types %}{% if type != blank %}
-      {% assign type_lower = type | downcase %}
-      <a class="nv-type" href="{{ type | url_for_type }}">
-        <span class="nv-type-art{% if type_lower contains 'branco' %} nv-type-art--white{% elsif type_lower contains 'ros' %} nv-type-art--rose{% elsif type_lower contains 'espum' %} nv-type-art--sparkling{% endif %}" aria-hidden="true">{% render 'wine-illustration', type: type_lower %}</span>
-        <span>{{ type | escape }}</span>{% render 'icon', name: 'arrow' %}
-      </a>
-    {% endif %}{% endfor %}
-    <a class="nv-type nv-type-all" href="{{ routes.all_products_collection_url }}"><span class="nv-type-art" aria-hidden="true">{% render 'icon', name: 'glass' %}</span><span>Todos os vinhos</span>{% render 'icon', name: 'arrow' %}</a>
-  </nav>
-</section>
+<section class="nv-categories nv-container" aria-labelledby="nv-categories-{{ section.id }}"><div class="nv-section-heading"><h2 id="nv-categories-{{ section.id }}">Compre por categoria</h2><a href="{{ routes.all_products_collection_url }}">Ver todos {% render 'icon', name: 'arrow' %}</a></div><div class="nv-category-grid">
+{% for block in section.blocks %}
+  {% capture fallback_url %}{% render 'category-link', category: block.settings.category %}{% endcapture %}
+  {% assign category_image = block.settings.image %}
+  {% if category_image == blank %}{% for product in collections.all.products %}{% capture matched %}{% render 'category-match', product: product, category: block.settings.category %}{% endcapture %}{% assign matched = matched | strip %}{% if matched == 'true' and product.featured_image %}{% assign category_image = product.featured_image %}{% break %}{% endif %}{% endfor %}{% endif %}
+  <a class="nv-category nv-category--{{ block.settings.category }}" href="{{ block.settings.collection.url | default: fallback_url | strip }}" {{ block.shopify_attributes }}><span class="nv-category-photo">{% if category_image %}{{ category_image | image_url: width: 500 | image_tag: loading: 'lazy', widths: '160,300,500', sizes: '(max-width: 760px) 26vw, 180px', alt: block.settings.title }}{% else %}{% render 'icon', name: 'glass' %}{% endif %}</span><strong>{{ block.settings.title | escape }}</strong><span class="nv-category-cta">Ver vinhos {% render 'icon', name: 'arrow' %}</span></a>
+{% endfor %}
+</div></section>
 {% schema %}
-{"name":"Videira · Tipos de vinho","settings":[],"presets":[{"name":"Videira · Tipos de vinho"}]}
+{"name":"Videira · Categorias","max_blocks":8,"settings":[],"blocks":[{"type":"category","name":"Categoria","settings":[{"type":"text","id":"title","label":"Título","default":"Tintos"},{"type":"select","id":"category","label":"Estilo","options":[{"value":"tinto","label":"Tintos"},{"value":"branco","label":"Brancos"},{"value":"rose","label":"Rosés"},{"value":"espumante","label":"Espumantes"}],"default":"tinto"},{"type":"collection","id":"collection","label":"Coleção de destino (opcional)"},{"type":"image_picker","id":"image","label":"Imagem (opcional)"}]}],"presets":[{"name":"Videira · Categorias","blocks":[{"type":"category","settings":{"title":"Tintos","category":"tinto"}},{"type":"category","settings":{"title":"Brancos","category":"branco"}},{"type":"category","settings":{"title":"Rosés","category":"rose"}},{"type":"category","settings":{"title":"Espumantes","category":"espumante"}}]}]}
 {% endschema %}

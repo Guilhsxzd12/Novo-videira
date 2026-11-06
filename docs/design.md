@@ -1,40 +1,22 @@
-# Estudo e decisões · Novo Videira
+# Videira 2.0 · Estrutura comercial
 
-Referências consultadas em 6 de novembro de 2026. A análise externa foi feita a partir do conteúdo e da navegação acessíveis das páginas; não houve inspeção visual em navegador das referências neste ambiente. Nenhuma imagem, marca, texto comercial ou código desses sites foi copiado.
+Referência principal: [Cia do Vinho](https://www.ciadovinho.com.br/), consultada em 6 de novembro de 2026. Foram estudados a página inicial, categorias, catálogo e a organização dos atalhos de preço. A abertura direta do site pelo ambiente retornou bloqueio 403; a pesquisa usou o conteúdo indexado, imagens de categorias e páginas públicas acessíveis. Não houve comparação visual pixel a pixel. Fotos, logo e produtos usados no tema são da própria Videira.
 
-| Referência | Observação de estrutura | Aplicação na Videira |
-| --- | --- | --- |
-| [Cia do Vinho](https://www.ciadovinho.com.br/) | Organiza a descoberta por vitrines, categorias, kits, harmonizações e países. | Tipos de vinho logo após o banner, seleções curtas, ocasiões e origens. Condições comerciais só serão anunciadas quando reais. |
-| [Mistral](https://www.mistral.com.br/) | Catálogo navegável por países/regiões, tipos, uvas e produtores, com informações de produto próximas à compra. | Navegação por características do vinho e conservação das informações dos cards atuais. Sem pontuações ou selos inventados. |
-| [Oda al Vino](https://www.odaalvino.com.br/) | Cabeçalho reúne seções e uma ação principal de compra. É um site de evento, com hierarquia diferente de um catálogo. | Cabeçalho compacto com identidade forte; na Videira a busca e o carrinho passam a ser as ações principais. |
-| [Videira atual](https://github.com/Guilhsxzd12/Shopify-Videira) | Identidade bordô/creme, fotografia de brinde, cards compactos arredondados e compra nativa Shopify. | Logo e fotografia próprios preservados. Componente de card, produtos, variantes e fluxo de checkout mantidos. |
+## Estrutura
 
-## Página inicial
+A loja prioriza campanha, produtos e navegação: banner amplo, vitrine principal, quatro categorias fotográficas, destaque para compra em caixas, faixas de preço, ofertas reais, novidades, origens, outras vitrines e marcas. Informações institucionais e dúvidas ficam no fim.
 
-1. Faixa de marca e cabeçalho: logo, busca, conta quando habilitada e seleção de vinhos.
-2. Banner: apresentação curta, fotografia original e botão para o catálogo.
-3. Orientação de compra: catálogo, escolha de quantidade, consulta de entrega e atendimento.
-4. Tipos de vinho: atalhos gerados pelo catálogo da loja.
-5. Escolhas da Videira: primeira vitrine, configurável por coleção.
-6. Ocasiões: três caminhos editoriais com destinos configuráveis.
-7. Novidades: vitrine por coleção ou produtos ordenados por cadastro.
-8. Países e origens: atalhos para coleções configuradas.
-9. Mais rótulos: segunda vitrine de descoberta.
-10. Uvas e bodegas: navegação complementar, seguida da marca, dúvidas e rodapé.
+- Cabeçalho de largura total com busca central e navegação direta. Sem cápsula flutuante.
+- No celular o cabeçalho rola junto com a página, deixando os títulos e produtos visíveis.
+- Fundo branco, bordô da marca e dourado nos detalhes; títulos em fonte sem serifa, com maior contraste e menor espaço entre seções.
+- Cards preservados em seu formato. Na vitrine mobile, duas colunas completas, sem cortar a segunda coluna.
+- Banner de Black Friday de 27 a 30 de novembro, com comunicação de preparação e condições em breve. É substituível por artes de desktop e celular no editor Shopify.
+- Fotos reais dos produtos vêm da Shopify; não há garrafas vetoriais decorativas na página inicial.
 
-## Identidade
+## Categorias e dados
 
-- Bordô `#651242`: marca, navegação e ações.
-- Fundo `#fcfaf6`: base clara para a leitura e para os cards.
-- Dourado `#b59758`: detalhes de identidade.
-- Títulos em Georgia, com formas editoriais; interface em Poppins local.
-- Cabeçalho participa do fluxo normal e fica aderente durante a rolagem; não usa offsets fixos sobre o banner.
-- No celular: busca em linha própria, menu expansível, tipos com rolagem horizontal e seções empilhadas.
+O catálogo público atual da Videira possui 38 produtos sem `product_type`. A navegação por categoria não depende mais desse campo: quatro blocos permanentes permitem selecionar coleções e imagens no editor. Sem seleção, usam busca por termos explícitos de tipo/uva nos títulos. As fotos de exemplo são encontradas no próprio catálogo por esses termos. Isso é uma alternativa de navegação, não uma classificação técnica definitiva; coleções configuradas são mais precisas.
 
-## Cards preservados
+Faixas de preço aparecem somente quando o filtro nativo de preço está disponível. A seção de ofertas inclui apenas produtos cujo preço de comparação é maior que o preço atual. Nenhum desconto, parcelamento ou benefício de frete é inventado. Marcas de pagamento só aparecem se a Shopify informar que estão habilitadas.
 
-O snippet de produto mantém a mesma estrutura: imagem em área própria, origem, nome, fornecedor, uvas, preço e ação. O arquivo de estilo novo não redefine o formato dos cards. As regras antigas de produto/carrinho continuam disponíveis para as páginas de compra.
-
-## Conteúdo comercial
-
-Não foram inventados frete grátis, parcelamento, avaliações, número de clientes, descontos ou pontuações. Coleções e preços serão os da loja Shopify. A campanha Black Friday anterior não foi reaplicada.
+A prévia usa um retrato dos dados públicos da Videira, com fotos locais para funcionar offline. Os valores e a disponibilidade da loja em produção continuam vindo exclusivamente da Shopify.

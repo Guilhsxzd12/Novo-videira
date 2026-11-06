@@ -17,7 +17,7 @@
     <a class="nv-brand" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} — início">{% render 'logo' %}</a>
     <form class="nv-search" action="{{ routes.search_url }}" method="get" role="search">
       <input type="hidden" name="type" value="product">
-      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Qual vinho vamos descobrir hoje?" aria-label="Buscar por vinho, uva, país ou bodega">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Busque por vinho, uva ou bodega" aria-label="Buscar por vinho, uva, país ou bodega">
       <button type="submit" aria-label="Pesquisar vinhos">{% render 'icon', name: 'search' %}</button>
     </form>
     <div class="nv-header-actions">
@@ -27,17 +27,15 @@
     </div>
   </div>
   <nav class="nv-navigation" aria-label="Navegação principal">
-    <a class="nv-all-wines" href="{{ catalog_url }}">{% render 'icon', name: 'menu' %} Todos os vinhos</a>
-    <details class="nv-nav-group vn-group"><summary>Tipos de vinho <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown">{% for type in shop.types %}{% if type != blank %}<a href="{{ type | url_for_type }}">{{ type | escape }}{% render 'icon', name: 'arrow' %}</a>{% endif %}{% endfor %}<a href="{{ catalog_url }}">Ver todos os vinhos</a></div></details>
-    <a href="{{ countries_url }}">Países</a><a href="{{ grapes_url }}">Uvas</a>
-    <details class="nv-nav-group vn-group"><summary>Bodegas <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown">{% for vendor in shop.vendors limit: 12 %}{% if vendor != blank %}<a href="{{ vendor | url_for_vendor }}">{{ vendor | escape }}{% render 'icon', name: 'arrow' %}</a>{% endif %}{% endfor %}<a href="{{ routes.root_url }}#bodegas">Explorar bodegas</a></div></details>
-    {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}
-    <a href="{{ routes.root_url }}#sobre">A Videira</a>
-    <a class="nv-nav-help" href="{{ routes.root_url }}#faq">{% render 'icon', name: 'chat' %} Precisa de ajuda?</a>
-  </nav>
+<details class="nv-nav-group vn-group"><summary>{% render 'icon', name: 'menu' %} <strong>Todos os vinhos</strong> <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown"><a href="{{ catalog_url }}">Catálogo completo</a>{% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}{% render 'icon', name: 'arrow' %}</a>{% endfor %}</div></details>
+{% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}</a>{% endfor %}
+<a href="{{ countries_url }}">Países</a><a href="{{ routes.root_url }}#bodegas">Bodegas</a>
+{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}
+<a class="nv-nav-help" href="{{ routes.root_url }}#faq">{% render 'icon', name: 'chat' %} Atendimento</a>
+</nav>
   <nav id="vn-mobile" class="nv-mobile" hidden aria-label="Menu para celular">
     <a href="{{ catalog_url }}">Todos os vinhos {% render 'icon', name: 'arrow' %}</a>
-    {% for type in shop.types %}{% if type != blank %}<a href="{{ type | url_for_type }}">{{ type | escape }}</a>{% endif %}{% endfor %}
+    {% assign categories = 'tinto,branco,rose,espumante' | split: ',' %}{% assign category_titles = 'Tintos,Brancos,Rosés,Espumantes' | split: ',' %}{% for category in categories %}{% capture destination %}{% render 'category-link', category: category %}{% endcapture %}<a href="{{ destination | strip }}">{{ category_titles[forloop.index0] }}</a>{% endfor %}
     <a href="{{ countries_url }}">Países</a><a href="{{ grapes_url }}">Uvas</a><a href="{{ routes.root_url }}#bodegas">Bodegas</a>
     {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% for child in link.links %}<a class="nv-mobile-child" href="{{ child.url }}">{{ child.title | escape }}</a>{% endfor %}{% endfor %}
     <a href="{{ routes.root_url }}#sobre">A Videira</a><a href="{{ routes.root_url }}#faq">Entregas e atendimento</a>

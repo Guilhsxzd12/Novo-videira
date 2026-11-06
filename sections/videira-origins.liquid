@@ -15,7 +15,7 @@
 {% endcapture %}
 {% assign origin_links = origin_links | strip %}
 {% if origin_links != blank %}
-<section id="paises" class="nv-origins"><div class="nv-origin-layout nv-container"><div class="nv-origin-intro"><p class="nv-eyebrow">CADA ORIGEM, UMA HISTÓRIA</p><h2>Um mundo para descobrir em cada taça.</h2><p>Encontre seu vinho pelo lugar de onde ele vem.</p><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Explore o catálogo {% render 'icon', name: 'arrow' %}</a></div><div class="nv-origin-grid">{{ origin_links }}</div></div></section>
+<section id="paises" class="nv-origins"><div class="nv-origin-layout nv-container"><div class="nv-origin-intro"><p class="nv-eyebrow">CADA ORIGEM, UMA HISTÓRIA</p><h2>Encontre por país</h2><p>Encontre seu vinho pelo lugar de onde ele vem.</p><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Ver todos {% render 'icon', name: 'arrow' %}</a></div><div class="nv-origin-grid">{{ origin_links }}</div></div></section>
 {% endif %}
 {% schema %}
 {"name":"Videira · Origens","settings":[],"blocks":[{"type":"origin","name":"Origem","settings":[{"type":"collection","id":"collection","label":"Coleção"},{"type":"text","id":"title","label":"País"},{"type":"text","id":"subtitle","label":"Regiões"}]}],"presets":[{"name":"Videira · Origens"}]}

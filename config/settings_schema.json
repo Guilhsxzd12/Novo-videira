@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Novo Videira",
     "theme_author": "Videira Vinhoteca",
-    "theme_version": "1.0.0",
+    "theme_version": "2.0.0",
     "theme_documentation_url": "https://github.com/Guilhsxzd12/Novo-videira",
     "theme_support_url": "https://github.com/Guilhsxzd12/Novo-videira/issues"
   },
@@ -26,7 +26,7 @@
         "type": "color",
         "id": "paper_color",
         "label": "Creme",
-        "default": "#fcfaf6"
+        "default": "#ffffff"
       },
       {
         "type": "image_picker",

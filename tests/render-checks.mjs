@@ -17,12 +17,18 @@ for (const type of pages) {
   assert.equal(html.includes('undefined'), false, type);
   assert.equal(/{[{%]/.test(html.replace(/<script[\s\S]*?<\/script>/g,'')), false, type + ': Liquid não resolvido');
   if (type === 'index') {
-    assert.ok(html.includes('O próximo brinde'));
-    assert.ok(html.includes('Um jantar especial.'));
+    assert.ok(html.includes('BLACK'));
+    assert.ok(html.includes('Vai levar'));
+    assert.ok(html.includes('Compre por categoria'));
+    assert.equal((html.match(/class="nv-category nv-category--/g)||[]).length,4);
     assert.equal(html.includes('id="selecao"'), count > 0);
     assert.equal(html.includes('id="paises"'), count > 0 && metadata);
     assert.equal(html.includes('id="uvas"'), count > 0 && metadata);
     if(count > 0) assert.ok(html.includes('sf-wine-card'));
+  }
+  if(type === 'collection') {
+    assert.equal(html.includes('class="sf-catalog-search"'), false);
+    assert.equal((html.match(/class="nv-search"/g)||[]).length,1);
   }
   if(type === 'product') {
     assert.ok(html.includes('data-product-variants'));
