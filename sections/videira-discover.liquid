@@ -1,0 +1,13 @@
+{% capture grape_links %}{% assign seen = '|' %}{% for product in collections.all.products %}{% assign grape = product.metafields.custom.grape.value %}{% assign key = grape | prepend: '|' | append: '|' %}{% if grape != blank %}{% unless seen contains key %}<a href="{{ routes.search_url }}?type=product&amp;q={{ grape | url_encode }}">{{ grape | escape }}</a>{% assign seen = seen | append: grape | append: '|' %}{% endunless %}{% endif %}{% endfor %}{% endcapture %}
+{% assign grape_links = grape_links | strip %}
+{% capture vendor_links %}{% for vendor in shop.vendors limit: 8 %}{% if vendor != blank %}<a href="{{ vendor | url_for_vendor }}">{{ vendor | escape }}{% render 'icon', name: 'arrow' %}</a>{% endif %}{% endfor %}{% endcapture %}
+{% assign vendor_links = vendor_links | strip %}
+{% if grape_links != blank or vendor_links != blank %}
+<section class="nv-discovery nv-container">
+{% if grape_links != blank %}<div id="uvas"><p class="nv-eyebrow">ENCONTRE O SEU ESTILO</p><h2>Uma uva. Muitas possibilidades.</h2><div class="nv-grapes">{{ grape_links }}</div></div>{% endif %}
+{% if vendor_links != blank %}<div id="bodegas"><p class="nv-eyebrow">QUEM ESTÁ POR TRÁS DO VINHO</p><h2>Conheça as bodegas.</h2><div class="nv-vendors">{{ vendor_links }}</div></div>{% endif %}
+</section>
+{% endif %}
+{% schema %}
+{"name":"Videira · Descobertas","settings":[],"presets":[{"name":"Videira · Descobertas"}]}
+{% endschema %}

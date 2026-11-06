@@ -1,0 +1,9 @@
+{% if section.blocks.size > 0 %}
+<section class="nv-pairings nv-container" aria-labelledby="nv-pairings-{{ section.id }}">
+  <div class="nv-section-heading"><div><p class="nv-eyebrow">O VINHO ACOMPANHA O MOMENTO</p><h2 id="nv-pairings-{{ section.id }}">Uma escolha para cada ocasião.</h2></div></div>
+  <div class="nv-pairing-grid">{% for block in section.blocks %}<a class="nv-pairing{% cycle ' nv-pairing--wine', ' nv-pairing--olive', ' nv-pairing--sand' %}" href="{{ block.settings.collection.url | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}><span class="nv-eyebrow">{{ block.settings.eyebrow | escape }}</span><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p><span class="nv-pairing-link">Explorar seleção {% render 'icon', name: 'arrow' %}</span>{% render 'wine-illustration' %}</a>{% endfor %}</div>
+</section>
+{% endif %}
+{% schema %}
+{"name":"Videira · Ocasiões","max_blocks":3,"settings":[],"blocks":[{"type":"occasion","name":"Ocasião","settings":[{"type":"text","id":"eyebrow","label":"Chamada","default":"ESCOLHA O SEU MOMENTO"},{"type":"text","id":"title","label":"Título","default":"À sua mesa."},{"type":"textarea","id":"text","label":"Texto","default":"Descubra um vinho para acompanhar."},{"type":"collection","id":"collection","label":"Coleção de destino"}]}],"presets":[{"name":"Videira · Ocasiões","blocks":[{"type":"occasion","settings":{"eyebrow":"PARA COMPARTILHAR","title":"Um jantar especial.","text":"Boas conversas merecem uma boa escolha."}},{"type":"occasion","settings":{"eyebrow":"PARA DESCOBRIR","title":"Novos favoritos.","text":"Explore outras uvas, origens e histórias."}},{"type":"occasion","settings":{"eyebrow":"PARA CELEBRAR","title":"Um bom encontro.","text":"Encontre o rótulo para o próximo brinde."}}]}]}
+{% endschema %}

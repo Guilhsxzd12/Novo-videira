@@ -1,0 +1,22 @@
+{% capture origin_links %}
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      {% assign origin_title = block.settings.title | default: block.settings.collection.title %}
+      {% if origin_title != blank %}<a href="{{ block.settings.collection.url | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}><strong>{{ origin_title | escape }}</strong><span>{{ block.settings.subtitle | escape }}</span>{% render 'icon', name: 'arrow' %}</a>{% endif %}
+    {% endfor %}
+  {% else %}
+    {% assign seen = '|' %}
+    {% for product in collections.all.products %}
+      {% assign country = product.metafields.custom.country.value %}
+      {% assign key = country | prepend: '|' | append: '|' %}
+      {% if country != blank %}{% unless seen contains key %}<a href="{{ routes.search_url }}?type=product&amp;q={{ country | url_encode }}"><strong>{{ country | escape }}</strong><span>Explore os rótulos</span>{% render 'icon', name: 'arrow' %}</a>{% assign seen = seen | append: country | append: '|' %}{% endunless %}{% endif %}
+    {% endfor %}
+  {% endif %}
+{% endcapture %}
+{% assign origin_links = origin_links | strip %}
+{% if origin_links != blank %}
+<section id="paises" class="nv-origins"><div class="nv-origin-layout nv-container"><div class="nv-origin-intro"><p class="nv-eyebrow">CADA ORIGEM, UMA HISTÓRIA</p><h2>Um mundo para descobrir em cada taça.</h2><p>Encontre seu vinho pelo lugar de onde ele vem.</p><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Explore o catálogo {% render 'icon', name: 'arrow' %}</a></div><div class="nv-origin-grid">{{ origin_links }}</div></div></section>
+{% endif %}
+{% schema %}
+{"name":"Videira · Origens","settings":[],"blocks":[{"type":"origin","name":"Origem","settings":[{"type":"collection","id":"collection","label":"Coleção"},{"type":"text","id":"title","label":"País"},{"type":"text","id":"subtitle","label":"Regiões"}]}],"presets":[{"name":"Videira · Origens"}]}
+{% endschema %}

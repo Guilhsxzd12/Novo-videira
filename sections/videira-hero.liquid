@@ -1,0 +1,16 @@
+<section class="nv-hero nv-container">
+  <div class="nv-hero-copy">
+    <p class="nv-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    <h1>{{ section.settings.title | escape }} <em>{{ section.settings.accent | escape }}</em></h1>
+    <p class="nv-hero-intro">{{ section.settings.intro | escape }}</p>
+    <div class="nv-hero-actions"><a class="nv-button" href="{{ section.settings.link | default: routes.all_products_collection_url }}">Explore os vinhos {% render 'icon', name: 'arrow' %}</a><a class="nv-text-link" href="{{ routes.root_url }}#sobre">Conheça a Videira</a></div>
+    <div class="nv-hero-signature"><span aria-hidden="true">✦</span> Para quem gosta de escolher bem.</div>
+  </div>
+  <div class="nv-hero-image">
+    {% if section.settings.image %}{{ section.settings.image | image_url: width: 1800 | image_tag: fetchpriority: 'high', loading: 'eager', widths: '480,800,1200,1800', sizes: '(max-width: 760px) 100vw, 55vw', alt: section.settings.image.alt }}{% else %}<img src="{{ 'videira-hero.jpg' | asset_url }}" alt="Taças de vinho reunidas em um brinde à mesa" width="1600" height="1067" fetchpriority="high">{% endif %}
+    <div class="nv-photo-note"><span>BOAS ESCOLHAS. BONS ENCONTROS.</span><p>O vinho é só o começo.</p></div>
+  </div>
+</section>
+{% schema %}
+{"name":"Videira · Banner","settings":[{"type":"text","id":"eyebrow","label":"Chamada","default":"A SUA PRÓXIMA DESCOBERTA"},{"type":"text","id":"title","label":"Título","default":"O próximo brinde"},{"type":"text","id":"accent","label":"Destaque","default":"começa aqui."},{"type":"textarea","id":"intro","label":"Descrição","default":"Encontre vinhos com origem, personalidade e lugar à sua mesa. Explore os rótulos e descubra o seu próximo favorito."},{"type":"image_picker","id":"image","label":"Fotografia"},{"type":"url","id":"link","label":"Destino do botão"}],"presets":[{"name":"Videira · Banner"}]}
+{% endschema %}

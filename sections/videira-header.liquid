@@ -1,0 +1,49 @@
+{% liquid
+  assign catalog_url = routes.all_products_collection_url
+  assign countries_url = catalog_url
+  assign grapes_url = catalog_url
+  for wine in collections.all.products
+    if wine.metafields.custom.country.value != blank
+      assign countries_url = routes.root_url | append: '#paises'
+    endif
+    if wine.metafields.custom.grape.value != blank
+      assign grapes_url = routes.root_url | append: '#uvas'
+    endif
+  endfor
+%}
+{% if section.settings.announcement != blank %}<div class="nv-announcement">{{ section.settings.announcement | escape }}</div>{% endif %}
+<header class="nv-header vn-header">
+  <div class="nv-header-main">
+    <a class="nv-brand" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} — início">{% render 'logo' %}</a>
+    <form class="nv-search" action="{{ routes.search_url }}" method="get" role="search">
+      <input type="hidden" name="type" value="product">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Qual vinho vamos descobrir hoje?" aria-label="Buscar por vinho, uva, país ou bodega">
+      <button type="submit" aria-label="Pesquisar vinhos">{% render 'icon', name: 'search' %}</button>
+    </form>
+    <div class="nv-header-actions">
+      {% if shop.customer_accounts_enabled %}<a class="nv-account" href="{{ routes.account_url }}" aria-label="Minha conta">{% render 'icon', name: 'account' %}<span>Minha conta</span></a>{% endif %}
+      <a class="nv-bag" href="{{ routes.cart_url }}" data-cart-open aria-label="Abrir minha seleção de vinhos">{% render 'icon', name: 'bag' %}<span class="nv-bag-label">Minha seleção</span><span class="nv-cart-count" data-cart-count>{{ cart.item_count }}</span></a>
+      <button class="nv-menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="vn-mobile" aria-label="Abrir menu">{% render 'icon', name: 'menu' %}</button>
+    </div>
+  </div>
+  <nav class="nv-navigation" aria-label="Navegação principal">
+    <a class="nv-all-wines" href="{{ catalog_url }}">{% render 'icon', name: 'menu' %} Todos os vinhos</a>
+    <details class="nv-nav-group vn-group"><summary>Tipos de vinho <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown">{% for type in shop.types %}{% if type != blank %}<a href="{{ type | url_for_type }}">{{ type | escape }}{% render 'icon', name: 'arrow' %}</a>{% endif %}{% endfor %}<a href="{{ catalog_url }}">Ver todos os vinhos</a></div></details>
+    <a href="{{ countries_url }}">Países</a><a href="{{ grapes_url }}">Uvas</a>
+    <details class="nv-nav-group vn-group"><summary>Bodegas <span aria-hidden="true">⌄</span></summary><div class="nv-dropdown">{% for vendor in shop.vendors limit: 12 %}{% if vendor != blank %}<a href="{{ vendor | url_for_vendor }}">{{ vendor | escape }}{% render 'icon', name: 'arrow' %}</a>{% endif %}{% endfor %}<a href="{{ routes.root_url }}#bodegas">Explorar bodegas</a></div></details>
+    {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}
+    <a href="{{ routes.root_url }}#sobre">A Videira</a>
+    <a class="nv-nav-help" href="{{ routes.root_url }}#faq">{% render 'icon', name: 'chat' %} Precisa de ajuda?</a>
+  </nav>
+  <nav id="vn-mobile" class="nv-mobile" hidden aria-label="Menu para celular">
+    <a href="{{ catalog_url }}">Todos os vinhos {% render 'icon', name: 'arrow' %}</a>
+    {% for type in shop.types %}{% if type != blank %}<a href="{{ type | url_for_type }}">{{ type | escape }}</a>{% endif %}{% endfor %}
+    <a href="{{ countries_url }}">Países</a><a href="{{ grapes_url }}">Uvas</a><a href="{{ routes.root_url }}#bodegas">Bodegas</a>
+    {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% for child in link.links %}<a class="nv-mobile-child" href="{{ child.url }}">{{ child.title | escape }}</a>{% endfor %}{% endfor %}
+    <a href="{{ routes.root_url }}#sobre">A Videira</a><a href="{{ routes.root_url }}#faq">Entregas e atendimento</a>
+    {% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">Minha conta</a>{% endif %}
+  </nav>
+</header>
+{% schema %}
+{"name":"Videira · Cabeçalho","class":"nv-header-section","settings":[{"type":"text","id":"announcement","label":"Faixa superior","default":"Vinhos com identidade. Momentos que ficam. · Foz do Iguaçu, PR"},{"type":"link_list","id":"menu","label":"Links adicionais"}]}
+{% endschema %}

@@ -1,0 +1,9 @@
+{% assign source = section.settings.collection | default: collections.all %}
+{% if source.products_count > 0 %}
+<section id="selecao" class="nv-featured nv-container">
+  {% render 'carousel', collection: source, title: section.settings.title, eyebrow: section.settings.eyebrow, limit: section.settings.limit %}
+</section>
+{% endif %}
+{% schema %}
+{"name":"Videira · Seleção","settings":[{"type":"text","id":"title","label":"Título","default":"Escolhas da Videira"},{"type":"text","id":"eyebrow","label":"Chamada","default":"SEU PRÓXIMO BOM VINHO"},{"type":"collection","id":"collection","label":"Coleção"},{"type":"range","id":"limit","label":"Rótulos","min":2,"max":12,"default":6}],"presets":[{"name":"Videira · Seleção"}]}
+{% endschema %}

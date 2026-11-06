@@ -1,0 +1,12 @@
+<footer class="nv-footer">
+  <div class="nv-footer-grid nv-container">
+    <div class="nv-footer-brand">{% render 'logo' %}<p>Vinhos com identidade.<br>Momentos que ficam.</p><small>Foz do Iguaçu · Paraná</small><div class="nv-footer-social"><a href="https://www.instagram.com/videiravinhoteca/" target="_blank" rel="noopener" aria-label="Instagram da Videira">{% render 'social-icon', name: 'instagram' %}</a>{% if settings.whatsapp != blank %}<a href="https://wa.me/{{ settings.whatsapp | remove: '+' | remove: ' ' | escape }}" target="_blank" rel="noopener" aria-label="Atendimento pelo WhatsApp">{% render 'social-icon', name: 'whatsapp' %}</a>{% endif %}</div></div>
+    <div><h3>Explore a Videira</h3><a href="{{ routes.all_products_collection_url }}">Todos os vinhos</a><a href="{{ routes.root_url }}#paises">Países e origens</a><a href="{{ routes.root_url }}#uvas">Uvas</a><a href="{{ routes.root_url }}#bodegas">Bodegas</a><a href="{{ routes.root_url }}#sobre">A Videira</a></div>
+    <div><h3>Informações</h3>{% for policy in shop.policies %}{% if policy.body != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}{% for link in section.settings.footer_menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}<a href="{{ routes.root_url }}#faq">Dúvidas frequentes</a>{% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">Minha conta</a>{% endif %}</div>
+    <div><h3>Vamos conversar?</h3><p>Uma ajuda para escolher seu próximo vinho.</p>{% if settings.whatsapp != blank %}<a href="https://wa.me/{{ settings.whatsapp | remove: '+' | remove: ' ' | escape }}" target="_blank" rel="noopener">Fale com a Videira {% render 'icon', name: 'arrow' %}</a>{% endif %}<p>Consulte as opções de entrega, os prazos e o pagamento no checkout.</p></div>
+  </div>
+  <div class="nv-footer-bottom nv-container"><span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</span><span>Venda proibida para menores de 18 anos. Beba com moderação.</span></div>
+</footer>
+{% schema %}
+{"name":"Rodapé Videira","settings":[{"type":"link_list","id":"footer_menu","label":"Menu de informações"}]}
+{% endschema %}

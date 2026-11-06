@@ -1,0 +1,105 @@
+{
+  "sections": {
+    "hero": {
+      "type": "videira-hero",
+      "settings": {
+        "eyebrow": "A SUA PRÓXIMA DESCOBERTA",
+        "title": "O próximo brinde",
+        "accent": "começa aqui.",
+        "intro": "Encontre vinhos com origem, personalidade e lugar à sua mesa. Explore os rótulos e descubra o seu próximo favorito."
+      }
+    },
+    "types": {
+      "type": "videira-categories",
+      "settings": {}
+    },
+    "featured": {
+      "type": "videira-featured",
+      "settings": {
+        "limit": 6,
+        "title": "Escolhas da Videira",
+        "eyebrow": "SEU PRÓXIMO BOM VINHO"
+      }
+    },
+    "discover_wines": {
+      "type": "videira-carousel",
+      "settings": {
+        "title": "Mais rótulos para descobrir",
+        "eyebrow": "EXPLORE A NOSSA ADEGA",
+        "limit": 12
+      }
+    },
+    "origins": {
+      "type": "videira-origins",
+      "settings": {}
+    },
+    "new": {
+      "type": "videira-carousel",
+      "settings": {
+        "title": "Novidades",
+        "eyebrow": "OS ÚLTIMOS RÓTULOS ADICIONADOS",
+        "limit": 12,
+        "newest": true
+      }
+    },
+    "discover": {
+      "type": "videira-discover",
+      "settings": {}
+    },
+    "editorial": {
+      "type": "videira-editorial",
+      "settings": {}
+    },
+    "benefits": {
+      "type": "videira-benefits",
+      "settings": {}
+    },
+    "occasions": {
+      "type": "videira-pairings",
+      "settings": {},
+      "blocks": {
+        "jantar": {
+          "type": "occasion",
+          "settings": {
+            "eyebrow": "PARA COMPARTILHAR",
+            "title": "Um jantar especial.",
+            "text": "Boas conversas merecem uma boa escolha."
+          }
+        },
+        "descoberta": {
+          "type": "occasion",
+          "settings": {
+            "eyebrow": "PARA DESCOBRIR",
+            "title": "Novos favoritos.",
+            "text": "Explore outras uvas, origens e histórias."
+          }
+        },
+        "brinde": {
+          "type": "occasion",
+          "settings": {
+            "eyebrow": "PARA CELEBRAR",
+            "title": "Um bom encontro.",
+            "text": "Encontre o rótulo para o próximo brinde."
+          }
+        }
+      },
+      "block_order": [
+        "jantar",
+        "descoberta",
+        "brinde"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "benefits",
+    "types",
+    "featured",
+    "occasions",
+    "new",
+    "origins",
+    "discover_wines",
+    "discover",
+    "editorial"
+  ]
+}

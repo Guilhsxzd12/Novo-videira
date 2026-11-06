@@ -1,0 +1,5 @@
+<section id="sobre" class="nv-about"><div class="nv-about-inner nv-container"><div><p class="nv-eyebrow">PRAZER, SOMOS A VIDEIRA</p><h2>A melhor parte do vinho é com quem você compartilha.</h2></div><div><p>De Foz do Iguaçu para a sua mesa. Vinhos com identidade e um atendimento próximo para ajudar você a encontrar o seu próximo favorito.</p><p>Explore o catálogo no seu tempo. Conheça as origens, descubra novas uvas e escolha os rótulos que combinam com você.</p><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Encontre o seu vinho {% render 'icon', name: 'arrow' %}</a></div></div></section>
+<section id="faq" class="nv-faq nv-container"><div><p class="nv-eyebrow">DO CATÁLOGO À SUA MESA</p><h2>Podemos ajudar?</h2></div><div>{% for i in (1..3) %}{% assign question = 'home.question_' | append: i %}{% assign answer = 'home.answer_' | append: i %}<details><summary>{{ question | t }}</summary><p>{{ answer | t }}</p></details>{% endfor %}</div></section>
+{% schema %}
+{"name":"Videira · Sobre e dúvidas","settings":[],"presets":[{"name":"Videira · Sobre e dúvidas"}]}
+{% endschema %}

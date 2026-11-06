@@ -1,0 +1,16 @@
+<section class="nv-types nv-container" aria-labelledby="nv-types-title-{{ section.id }}">
+  <div class="nv-section-heading"><div><p class="nv-eyebrow">CADA ESTILO, UMA DESCOBERTA</p><h2 id="nv-types-title-{{ section.id }}">Qual é o seu vinho?</h2></div><a class="nv-text-link" href="{{ routes.all_products_collection_url }}">Ver todos {% render 'icon', name: 'arrow' %}</a></div>
+  <nav class="nv-type-grid" aria-label="Escolha pelo tipo de vinho">
+    {% for type in shop.types %}{% if type != blank %}
+      {% assign type_lower = type | downcase %}
+      <a class="nv-type" href="{{ type | url_for_type }}">
+        <span class="nv-type-art{% if type_lower contains 'branco' %} nv-type-art--white{% elsif type_lower contains 'ros' %} nv-type-art--rose{% elsif type_lower contains 'espum' %} nv-type-art--sparkling{% endif %}" aria-hidden="true">{% render 'wine-illustration', type: type_lower %}</span>
+        <span>{{ type | escape }}</span>{% render 'icon', name: 'arrow' %}
+      </a>
+    {% endif %}{% endfor %}
+    <a class="nv-type nv-type-all" href="{{ routes.all_products_collection_url }}"><span class="nv-type-art" aria-hidden="true">{% render 'icon', name: 'glass' %}</span><span>Todos os vinhos</span>{% render 'icon', name: 'arrow' %}</a>
+  </nav>
+</section>
+{% schema %}
+{"name":"Videira · Tipos de vinho","settings":[],"presets":[{"name":"Videira · Tipos de vinho"}]}
+{% endschema %}
