@@ -66,9 +66,18 @@
   document.addEventListener('shopify:section:load',update);
 })();
 (() => {
- const media=matchMedia('(max-width:760px)');
- const setFooter=()=>document.querySelectorAll('.zip-footer-group').forEach(group=>group.open=!media.matches);
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setFooter);else setFooter();
- media.addEventListener('change',setFooter);
- document.addEventListener('shopify:section:load',setFooter);
+ const initialize = (scope = document) => scope.querySelectorAll('[data-country-carousel]').forEach(section => {
+  if (section.dataset.ready) return;
+  section.dataset.ready = 'true';
+  const track = section.querySelector('.zip-country-track');
+  const prev = section.querySelector('[data-country-prev]');
+  const next = section.querySelector('[data-country-next]');
+  const update = () => { prev.disabled = track.scrollLeft < 2; next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2; };
+  const move = direction => track.scrollBy({left: direction * Math.max(180, track.clientWidth * .75), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  prev.addEventListener('click', () => move(-1)); next.addEventListener('click', () => move(1));
+  track.addEventListener('scroll', update, {passive:true});
+  new ResizeObserver(update).observe(track); new MutationObserver(update).observe(track, {childList:true}); update();
+ });
+ if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize()); else initialize();
+ document.addEventListener('shopify:section:load', event => initialize(event.target));
 })();

@@ -19,3 +19,9 @@ Preços, variantes, estoque, carrinho e checkout usam Shopify. Favoritos ficam n
 - [Design](docs/design.md), [validação](docs/validacao.md) e [testes](tests/README.md).
 
 O ZIP contém somente pastas do tema. O repositório antigo Shopify-Videira não foi alterado.
+
+## Interação e adaptação
+
+A faixa superior desliza continuamente e respeita a preferência de redução de movimento. Países usam carrossel com gesto de arrastar e botões; adicione blocos **País** na seção Loja ZIP para incluir nome, imagem e coleção de destino. Ao adicionar o primeiro bloco, cadastre também os países existentes que deseja manter.
+
+O rodapé tradicional apresenta links sempre visíveis, identidade bordô e contatos da Videira. No celular, organiza-se em duas colunas; banners editoriais ficam empilhados e os serviços ocupam uma faixa compacta. No computador, o rodapé e os banners usam colunas mais amplas.
