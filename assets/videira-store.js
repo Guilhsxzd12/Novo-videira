@@ -81,3 +81,15 @@
  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize()); else initialize();
  document.addEventListener('shopify:section:load', event => initialize(event.target));
 })();
+
+(() => {
+ const initialize = (scope=document) => scope.querySelectorAll('[data-announcements]').forEach(el => {
+  if(el.dataset.ready)return;el.dataset.ready='true';
+  const items=[...el.querySelectorAll('.zip-announcement')], button=el.querySelector('[data-announcement-pause]');
+  const media=matchMedia('(prefers-reduced-motion: reduce)');let index=0,paused=false,timer;
+  const start=()=>{clearInterval(timer);if(paused||media.matches||document.hidden)return;timer=setInterval(()=>{if(!el.isConnected){clearInterval(timer);return;}items[index].hidden=true;index=(index+1)%items.length;items[index].hidden=false;},4200);};
+  button.addEventListener('click',()=>{paused=!paused;button.setAttribute('aria-pressed',String(paused));button.setAttribute('aria-label',paused?'Retomar mensagens':'Pausar mensagens');button.textContent=paused?'▶':'Ⅱ';start();});
+  el.addEventListener('mouseenter',()=>clearInterval(timer));el.addEventListener('mouseleave',start);el.addEventListener('focusin',()=>clearInterval(timer));el.addEventListener('focusout',start);document.addEventListener('visibilitychange',start);media.addEventListener('change',start);start();
+ });
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>initialize());else initialize();document.addEventListener('shopify:section:load',e=>initialize(e.target));
+})();

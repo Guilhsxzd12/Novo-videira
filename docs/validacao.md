@@ -10,3 +10,5 @@
 Os testes locais usam LiquidJS e um servidor que simula endpoints Shopify. Não validam pagamento, frete, inscrição real na newsletter ou configurações da loja. Esses fluxos exigem a prévia Shopify e pedido de teste. Não houve publicação direta na loja.
 
 Revisão de interação: Chromium verificou o movimento real da faixa superior, rolagem dos países com dez itens simulados, rodapé com links visíveis sem acordeões e ausência de transbordamento horizontal em 1440 e 390 px. Os países extras do teste não fazem parte do catálogo publicado.
+
+Identidade e produto: repetidos os testes Chromium em desktop/celular; confirmada uma única mensagem visível e sua troca automática, variantes disponíveis/indisponíveis e compra. Capturas de produto em product-1440.png e product-390.png. A seção main-product.liquid foi recuperada integralmente do repositório original.

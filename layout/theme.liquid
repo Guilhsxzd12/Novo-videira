@@ -17,6 +17,8 @@
 {{ 'zip-ciadoviinhoo.css' | asset_url | stylesheet_tag }}
 {{ 'zip-landing-page.css' | asset_url | stylesheet_tag }}
 {{ 'videira-zip.css' | asset_url | stylesheet_tag }}
+{% if request.page_type == 'product' %}{{ 'videira-original-product.css' | asset_url | stylesheet_tag }}{% endif %}
+{{ 'videira-brand.css' | asset_url | stylesheet_tag }}
 <style>@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url('{{ 'montserrat-variable.ttf' | asset_url }}') format('truetype')}:root{--nv-wine:{{ settings.wine_color | default: '#651242' }};--nv-gold:{{ settings.gold_color | default: '#b59758' }};--nv-paper:{{ settings.paper_color | default: '#fcfaf6' }}}</style>
 <script src="{{ 'videira.js' | asset_url }}" defer></script>
 <script src="{{ 'videira-store.js' | asset_url }}" defer></script>

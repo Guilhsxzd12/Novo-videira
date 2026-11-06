@@ -22,6 +22,12 @@ O ZIP contém somente pastas do tema. O repositório antigo Shopify-Videira não
 
 ## Interação e adaptação
 
-A faixa superior desliza continuamente e respeita a preferência de redução de movimento. Países usam carrossel com gesto de arrastar e botões; adicione blocos **País** na seção Loja ZIP para incluir nome, imagem e coleção de destino. Ao adicionar o primeiro bloco, cadastre também os países existentes que deseja manter.
+A faixa superior alterna uma mensagem por vez e respeita a preferência de redução de movimento. Países usam carrossel com gesto de arrastar e botões; adicione blocos **País** na seção Loja ZIP para incluir nome, imagem e coleção de destino. Ao adicionar o primeiro bloco, cadastre também os países existentes que deseja manter.
 
 O rodapé tradicional apresenta links sempre visíveis, identidade bordô e contatos da Videira. No celular, organiza-se em duas colunas; banners editoriais ficam empilhados e os serviços ocupam uma faixa compacta. No computador, o rodapé e os banners usam colunas mais amplas.
+
+## Identidade Videira e produto original
+
+A faixa superior apresenta uma mensagem por vez, alternando a cada 4,2 segundos; inclui pausa e respeita redução de movimento. A identidade utiliza bordô, dourado e Poppins, mantendo o fundo branco e a estrutura aprovada.
+
+A seção de produto foi recuperada de `Guilhsxzd12/Shopify-Videira/main`. Seus estilos originais de produto estão em `assets/videira-original-product.css`, isolados para não alterar outras páginas; a adaptação final aplica cores Videira e fundo branco. Galeria, detalhes, variantes e compra mantêm o código original.
